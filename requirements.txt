@@ -1,0 +1,8 @@
+requests
+python-dotenv
+pandas
+supabase
+rich
+tqdm
+
+

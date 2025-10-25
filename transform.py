@@ -26,7 +26,11 @@ def transform_calls(calls):
         artifact_variables = artifact.get("variableValues", {}) or {}
         assistant_phone = artifact_variables.get("phoneNumber", {}) or {}
 
-        analysis_structured = c.get("analysis", {}).get("structuredData", {}) or {}
+        analysis = c.get("analysis", {})
+        if isinstance(analysis, dict):
+            analysis_structured = analysis.get("structuredData", {}) or {}
+        else:
+            analysis_structured = {}
 
         # --- Build grouped JSON objects ---
         customer_json = {**customer_overrides, "phone_number": customer_number}

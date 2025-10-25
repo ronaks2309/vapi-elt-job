@@ -4,9 +4,16 @@ from config import USE_RICH_LOGGING
 
 logger = get_logger(__name__, use_rich=USE_RICH_LOGGING)
 
-def print_etl_summary(extract_count=0, transform_count=0, upload_success=0,
-                      upload_failed=0, load_success=0, load_failed=0,
-                      audit_time=None):
+def print_etl_summary(
+    extract_count=0,
+    transform_count=0,
+    upload_success=0,
+    upload_skipped=0,
+    upload_failed=0,
+    load_success=0,
+    load_failed=0,
+    audit_time=None,
+):
     """
     Prints a clean, color-coded summary banner for the ETL pipeline run.
     """
@@ -18,7 +25,9 @@ def print_etl_summary(extract_count=0, transform_count=0, upload_success=0,
 
     logger.success(f"🟢 Extracted   : {extract_count:,} records")
     logger.success(f"🧩 Transformed : {transform_count:,} records")
-    logger.success(f"☁️  Uploaded    : {upload_success:,} succeeded, {upload_failed:,} failed")
+    logger.success(
+        f"☁️  Recordings Uploaded    : {upload_success:,} succeeded, {upload_skipped:,} skipped, {upload_failed:,} failed"
+    )
     logger.success(f"💾 Loaded      : {load_success:,} succeeded, {load_failed:,} failed")
 
     if audit_time:

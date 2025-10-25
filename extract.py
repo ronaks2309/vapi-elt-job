@@ -29,7 +29,7 @@ def extract_calls(api_key=None, updated_at_gt=None):
             "limit": VAPI_PAGE_LIMIT,
             "sortOrder": "ASC",
             # Example filter (you can remove or replace)
-            "id": "019a1250-1b3a-700b-bb30-9c30e437f1f7"
+            #"id": "019a1250-1b3a-700b-bb30-9c30e437f1f7"
         }
         if updated_at_gt:
             params["updatedAtGt"] = updated_at_gt

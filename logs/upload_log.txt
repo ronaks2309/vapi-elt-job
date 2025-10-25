@@ -45,3 +45,1633 @@
 2025-10-24 18:40:36 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
 2025-10-24 18:40:36 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
 
+2025-10-24 22:20:56 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 22:20:57 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 22:20:57 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 22:20:57 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 22:20:57 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 22:20:57 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 22:20:57 [INFO] __main__ — Fetching calls from VAPI v2...
+2025-10-24 22:20:57 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 22:20:58 [INFO] extract — [Page 1] Retrieved 1 calls.
+2025-10-24 22:20:58 [INFO] extract — ✅ Extraction complete — total 1 calls fetched.
+2025-10-24 22:20:58 [SUCCESS] extract — SUCCESS: Extracted 1 calls from VAPI API.
+2025-10-24 22:20:58 [SUCCESS] __main__ — SUCCESS: Extracted 1 calls from VAPI.
+2025-10-24 22:20:58 [INFO] __main__ — Total calls fetched: 1
+2025-10-24 22:20:58 [INFO] __main__ — Transforming calls...
+2025-10-24 22:20:58 [INFO] transform — Transforming 1 raw call records...
+2025-10-24 22:20:58 [INFO] transform — ✅ Transform complete — 1 rows created.
+2025-10-24 22:20:58 [SUCCESS] transform — SUCCESS: Transformed 1 calls to DataFrame.
+2025-10-24 22:20:58 [SUCCESS] __main__ — SUCCESS: Transformed 1 calls to DataFrame.
+2025-10-24 22:20:58 [INFO] __main__ — Uploading recordings in parallel...
+2025-10-24 22:21:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1b3a-700b-bb30-9c30e437f1f7
+2025-10-24 22:21:00 [SUCCESS] upload_audio — SUCCESS: Upload complete — 1 succeeded, 0 failed
+2025-10-24 22:21:00 [INFO] upload_audio — ✅ Upload complete — 1 succeeded, 0 failed
+2025-10-24 22:21:00 [SUCCESS] __main__ — SUCCESS: Uploaded all recordings in parallel.
+2025-10-24 22:21:00 [SUCCESS] __main__ — SUCCESS: Saved DataFrame to calls_with_recordings.csv
+2025-10-24 22:21:00 [INFO] __main__ — ✅ ETL complete. Saved to calls_with_recordings.csv
+2025-10-24 22:21:00 [INFO] __main__ — ⬆️ Loading transformed data to Supabase...
+2025-10-24 22:21:00 [INFO] load — 🔍 Validating DataFrame schema before load...
+2025-10-24 22:21:00 [SUCCESS] load — ✅ All required columns present.
+2025-10-24 22:21:00 [WARNING] load — ⚠️ Extra columns found (not in expected schema): ['assistant_id', 'org_id', 'campaign_id', 'ended_reason', 'created_at', 'started_at', 'ended_at', 'updated_at', 'stereo_recording_url']
+2025-10-24 22:21:00 [SUCCESS] load — ✅ Schema validation passed.
+2025-10-24 22:21:00 [INFO] load — 🚀 Starting upsert of 1 records into table 'ai_calls'...
+2025-10-24 22:21:00 [INFO] load — 🔹 Processing batch 1 (1 rows)...
+2025-10-24 22:21:01 [SUCCESS] load — ✅ Batch 1 — 1 rows upserted successfully.
+2025-10-24 22:21:01 [SUCCESS] load — 🎯 Load completed — all 1 records successfully upserted into 'ai_calls'.
+2025-10-24 22:21:01 [SUCCESS] __main__ — ✅ Load finished successfully at 2025-10-25T05:21:00.514022+00:00
+2025-10-24 22:21:01 [INFO] utils.summary_utils — 
+══════════════════════════════════════════════════════════════════════
+2025-10-24 22:21:01 [INFO] utils.summary_utils — 📊 ETL PIPELINE SUMMARY
+2025-10-24 22:21:01 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 22:21:01 [SUCCESS] utils.summary_utils — 🟢 Extracted   : 1 records
+2025-10-24 22:21:01 [SUCCESS] utils.summary_utils — 🧩 Transformed : 1 records
+2025-10-24 22:21:01 [SUCCESS] utils.summary_utils — ☁️  Uploaded    : 1 succeeded, 0 failed
+2025-10-24 22:21:01 [SUCCESS] utils.summary_utils — 💾 Loaded      : 1 succeeded, 0 failed
+2025-10-24 22:21:01 [INFO] utils.summary_utils — 🕒 Audit Time  : 2025-10-25T05:21:00.514022+00:00
+2025-10-24 22:21:01 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 22:21:01 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
+
+2025-10-24 22:32:44 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 22:32:44 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 22:32:44 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 22:32:44 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 22:32:44 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 22:32:44 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 22:32:44 [INFO] __main__ — Fetching calls from VAPI v2...
+2025-10-24 22:32:44 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 22:32:48 [INFO] extract — [Page 1] Retrieved 259 calls.
+2025-10-24 22:32:48 [INFO] extract — ✅ Extraction complete — total 259 calls fetched.
+2025-10-24 22:32:48 [SUCCESS] extract — SUCCESS: Extracted 259 calls from VAPI API.
+2025-10-24 22:32:48 [SUCCESS] __main__ — SUCCESS: Extracted 259 calls from VAPI.
+2025-10-24 22:32:48 [INFO] __main__ — Total calls fetched: 259
+2025-10-24 22:32:48 [INFO] __main__ — Transforming calls...
+2025-10-24 22:32:48 [INFO] transform — Transforming 259 raw call records...
+2025-10-24 22:38:05 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 22:38:06 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 22:38:06 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 22:38:06 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 22:38:06 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 22:38:06 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 22:38:06 [INFO] __main__ — Fetching calls from VAPI v2...
+2025-10-24 22:38:06 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 22:38:08 [INFO] extract — [Page 1] Retrieved 259 calls.
+2025-10-24 22:38:08 [INFO] extract — ✅ Extraction complete — total 259 calls fetched.
+2025-10-24 22:38:08 [SUCCESS] extract — SUCCESS: Extracted 259 calls from VAPI API.
+2025-10-24 22:38:08 [SUCCESS] __main__ — SUCCESS: Extracted 259 calls from VAPI.
+2025-10-24 22:38:08 [INFO] __main__ — Total calls fetched: 259
+2025-10-24 22:38:08 [INFO] __main__ — Transforming calls...
+2025-10-24 22:38:08 [INFO] transform — Transforming 259 raw call records...
+2025-10-24 22:38:08 [INFO] transform — ✅ Transform complete — 259 rows created.
+2025-10-24 22:38:08 [SUCCESS] transform — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 22:38:08 [SUCCESS] __main__ — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 22:38:08 [INFO] __main__ — Uploading recordings in parallel...
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1dcb-700b-bb30-b722136062e4
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1f15-700b-bb30-c69134021952
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-203f-700b-bb30-c838c7a1c80e
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2149-700b-bb30-d7e83f4c7e28
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-22a5-700b-bb30-d8f35e911886
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-23b8-700b-bb30-e8579889e561
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-24d2-700b-bb30-f0d725a535c7
+2025-10-24 22:38:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-288e-700b-bb30-fcae95322d06
+2025-10-24 22:38:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-29be-700b-bb31-05ab6f9866d5
+2025-10-24 22:38:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a07-700b-bb31-0e4b89c3b721
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2adf-700b-bb31-272a2be7139c
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b22-700b-bb31-289ad328203d
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b61-700b-bb31-3641caed71d6
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2e73-700b-bb31-39e9f3720cc2
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2ebb-700b-bb31-4426f336ae5b
+2025-10-24 22:38:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1b3a-700b-bb30-9c30e437f1f7
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f40-700b-bb31-56e451855dfa
+2025-10-24 22:38:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f7e-700b-bb31-5b210d2be971
+2025-10-24 22:38:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1c7a-700b-bb30-aab34eca7301
+2025-10-24 22:38:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a54-700b-bb31-138ce76421a5
+2025-10-24 22:38:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a98-700b-bb31-1d0cc18fdece
+2025-10-24 22:38:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2fc5-700b-bb31-653f69003ea5
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-30df-700b-bb31-8244912411c1
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3134-700b-bb31-8c5c3de4a5c7
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3178-700b-bb31-94c2b56e0cf1
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31b8-700b-bb31-9aa269c4a13d
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31fa-700b-bb31-a7e818d196fd
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-323a-700b-bb31-a812ba6f0527
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3281-700b-bb31-b2d34a16ea9f
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-32c3-700b-bb31-b8ca764c4ceb
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-330f-700b-bb31-c54681589133
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-335a-700b-bb31-ca28d45e5a94
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33a6-700b-bb31-d143d0f6893a
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33fa-700b-bb31-d99abd6ed8b7
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-343e-700b-bb31-e2316d6fed69
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3484-700b-bb31-eae72c39b95d
+2025-10-24 22:38:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2efa-700b-bb31-4896c16ce484
+2025-10-24 22:38:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3518-700b-bb31-fc99cc0f52c6
+2025-10-24 22:38:13 [WARNING] upload_audio — [RETRY] 019a1250-3017-700b-bb31-68b3dd8412ac — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:13 [WARNING] upload_audio — [RETRY] 019a1250-3099-700b-bb31-7aeeccf6092a — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-305a-700b-bb31-75d5f14d7e8d
+2025-10-24 22:38:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35b1-700b-bb32-08eb659d87fd
+2025-10-24 22:38:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35f2-700b-bb32-11647e3a19b5
+2025-10-24 22:38:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3643-700b-bb32-1bf5f01b89ec
+2025-10-24 22:38:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-368f-700b-bb32-238ea56c9dd7
+2025-10-24 22:38:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-36e0-700b-bb32-29210275a4f3
+2025-10-24 22:38:14 [WARNING] upload_audio — [RETRY] 019a1250-34d2-700b-bb31-f28d67388b1b — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:14 [WARNING] upload_audio — [RETRY] 019a1250-3562-700b-bb32-01d8d8bb9aaa — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:15 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3760-700b-bb32-30d17433ae86
+2025-10-24 22:38:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3099-700b-bb31-7aeeccf6092a
+2025-10-24 22:38:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37a0-700b-bb32-3d588ab71dc7
+2025-10-24 22:38:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3017-700b-bb31-68b3dd8412ac
+2025-10-24 22:38:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-386e-700b-bb32-5532fc4ea003
+2025-10-24 22:38:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38b2-700b-bb32-5843a404282b
+2025-10-24 22:38:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38f6-700b-bb32-61ed7e32a632
+2025-10-24 22:38:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3562-700b-bb32-01d8d8bb9aaa
+2025-10-24 22:38:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3975-700b-bb32-72543a9dbbbe
+2025-10-24 22:38:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-39bc-700b-bb32-7e53cfbe5ef2
+2025-10-24 22:38:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3e13-700b-bb32-875a6b9cdee1
+2025-10-24 22:38:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-34d2-700b-bb31-f28d67388b1b
+2025-10-24 22:38:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3936-700b-bb32-69eeb99fcc88
+2025-10-24 22:38:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3ee8-700b-bb32-9ee7f36233b6
+2025-10-24 22:38:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f2e-700b-bb32-a5528bfef6a2
+2025-10-24 22:38:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f96-700b-bb32-ab4cec67c406
+2025-10-24 22:38:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-4f38-700b-bb32-b0fc570b72a7
+2025-10-24 22:38:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5108-700b-bb32-c1115550cc4e
+2025-10-24 22:38:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3831-700b-bb32-4dd841fadab4
+2025-10-24 22:38:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37e8-700b-bb32-427eb6f73cf5
+2025-10-24 22:38:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3ea6-700b-bb32-966c4bcbbd05
+2025-10-24 22:38:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3e60-700b-bb32-8e402d881ea4
+2025-10-24 22:38:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-53f6-700b-bb32-f381cbdde096
+2025-10-24 22:38:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-543a-700b-bb32-fa9adabb9db2
+2025-10-24 22:38:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5490-700b-bb33-079d80ad21ed
+2025-10-24 22:38:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-54d1-700b-bb33-0e68dab9ad68
+2025-10-24 22:38:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5213-700b-bb32-d5bdcb7bfa54
+2025-10-24 22:38:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5568-700b-bb33-19fca30525f2
+2025-10-24 22:38:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-51a0-700b-bb32-c89762d5b183
+2025-10-24 22:38:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5307-700b-bb32-e52448d01abf
+2025-10-24 22:38:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-53a9-700b-bb32-ef4c1a671788
+2025-10-24 22:38:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-56b6-700b-bb33-3b1311884889
+2025-10-24 22:38:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-551a-700b-bb33-137d3846264a
+2025-10-24 22:38:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5740-700b-bb33-498beb4ba7c4
+2025-10-24 22:38:20 [WARNING] upload_audio — [RETRY] 019a1250-55f8-700b-bb33-2b1c413d1401 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:20 [WARNING] upload_audio — [RETRY] 019a1250-5651-700b-bb33-32d9cf690002 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:20 [WARNING] upload_audio — [RETRY] 019a1250-55b2-700b-bb33-24a42bde0984 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:22 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-56f4-700b-bb33-46152ba8b00a
+2025-10-24 22:38:22 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-57d5-700b-bb33-592048bb88e3
+2025-10-24 22:38:22 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-581e-700b-bb33-630f36384a03
+2025-10-24 22:38:22 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-578a-700b-bb33-5031b6c745d2
+2025-10-24 22:38:22 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-58c0-700b-bb33-7b74ebf8a8dd
+2025-10-24 22:38:23 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-586d-700b-bb33-6e03614a4797
+2025-10-24 22:38:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-59ed-700b-bb33-9ffdbbcdb530
+2025-10-24 22:38:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5a3e-700b-bb33-a0ebc26d93f6
+2025-10-24 22:38:24 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-590f-700b-bb33-8110f6eb4e53
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5ad4-700b-bb33-b293400b18c4
+2025-10-24 22:38:24 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55f8-700b-bb33-2b1c413d1401
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5b6e-700b-bb33-c6e649547fa0
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5bbd-700b-bb33-cfd981c0c472
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5c0a-700b-bb33-d14223e69bf7
+2025-10-24 22:38:24 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55b2-700b-bb33-24a42bde0984
+2025-10-24 22:38:24 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5651-700b-bb33-32d9cf690002
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-60ca-700b-bb34-3f9605dde4bd
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6214-700b-bb34-5e9402e1018a
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-63cb-700b-bb34-8bc06b2475b1
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6583-700b-bb34-b7befe401f1f
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6867-700b-bb34-f8058a151202
+2025-10-24 22:38:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-69e0-700b-bb35-1afeee533c02
+2025-10-24 22:38:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5a88-700b-bb33-abcaaa57eb53
+2025-10-24 22:38:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6c56-700b-bb35-5a9c294503a5
+2025-10-24 22:38:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5c67-700b-bb33-dca08e8cb292
+2025-10-24 22:38:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6d75-700b-bb35-7a25d642847f
+2025-10-24 22:38:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5b19-700b-bb33-ba75c98b8b47
+2025-10-24 22:38:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5cba-700b-bb33-e510d159eb4b
+2025-10-24 22:38:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-585b-7dd4-901b-c3d4c11b3103
+2025-10-24 22:38:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6bbb-700b-bb35-4dc680ba3d7e
+2025-10-24 22:38:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-5913-7dd4-901b-d955129e2d67
+2025-10-24 22:38:26 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6c9c-700b-bb35-666489f41faf
+2025-10-24 22:38:26 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1267-770b-7ffb-981e-8e40ae2d9ea1
+2025-10-24 22:38:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-65a4-7dd4-901b-ff1a26e7cdb5
+2025-10-24 22:38:26 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1289-0b29-7ffb-9838-17ae0a248c4b
+2025-10-24 22:38:27 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-58c5-7dd4-901b-d7b1ae80dee3
+2025-10-24 22:38:27 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5eee-7dd4-901b-e4cddee627b5
+2025-10-24 22:38:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6723-7dd4-901c-210110fe3316
+2025-10-24 22:38:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6766-7dd4-901c-296a5051e9db
+2025-10-24 22:38:27 [WARNING] upload_audio — [RETRY] 019a1290-6686-7dd4-901c-17c436309844 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:27 [WARNING] upload_audio — [RETRY] 019a1290-664f-7dd4-901c-0916aeed02ec — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:27 [WARNING] upload_audio — [RETRY] 019a1290-5f32-7dd4-901b-e8007f9d538a — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:28 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ae-7dd4-901c-307470c9b008
+2025-10-24 22:38:28 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-66d9-7dd4-901c-1bda3a511453
+2025-10-24 22:38:28 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-68c3-7dd4-901c-4c69d7f3fc0b
+2025-10-24 22:38:28 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6903-7dd4-901c-51523ee52f58
+2025-10-24 22:38:28 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6940-7dd4-901c-5df2329fc43b
+2025-10-24 22:38:29 [WARNING] upload_audio — [RETRY] 019a1290-67ec-7dd4-901c-38ec2c2eac9f — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:29 [WARNING] upload_audio — [RETRY] 019a1290-6985-7dd4-901c-66ba181ee4af — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:30 [WARNING] upload_audio — [RETRY] 019a1290-5f32-7dd4-901b-e8007f9d538a — attempt 2/3, retrying in 4s...
+2025-10-24 22:38:30 [WARNING] upload_audio — [RETRY] 019a1290-664f-7dd4-901c-0916aeed02ec — attempt 2/3, retrying in 4s...
+2025-10-24 22:38:30 [WARNING] upload_audio — [RETRY] 019a1290-6686-7dd4-901c-17c436309844 — attempt 2/3, retrying in 4s...
+2025-10-24 22:38:33 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6985-7dd4-901c-66ba181ee4af
+2025-10-24 22:38:33 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ec-7dd4-901c-38ec2c2eac9f
+2025-10-24 22:38:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-69dc-7dd4-901c-6f066378a5b5
+2025-10-24 22:38:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a18-7dd4-901c-720ceda3bd66
+2025-10-24 22:38:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a59-7dd4-901c-7c09fe069b6c
+2025-10-24 22:38:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a92-7dd4-901c-80162b7f667f
+2025-10-24 22:38:35 [ERROR] upload_audio — [FAILED] 019a1290-664f-7dd4-901c-0916aeed02ec: all retries exhausted — Upload failed for 019a1290-664f-7dd4-901c-0916aeed02ec: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2025-10-24 22:38:35 [WARNING] upload_audio — [RETRY] 019a1290-6ad3-7dd4-901c-8dfbdd0c6c47 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6b94-7dd4-901c-a1c93d1603eb
+2025-10-24 22:38:35 [WARNING] upload_audio — [RETRY] 019a1290-6b1d-7dd4-901c-908ab9e73b41 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6bed-7dd4-901c-aca8aeabc18d
+2025-10-24 22:38:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c38-7dd4-901c-b0d58a99ceb9
+2025-10-24 22:38:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c8c-7dd4-901c-bbae67f910cb
+2025-10-24 22:38:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6cca-7dd4-901c-c1fc2f62e192
+2025-10-24 22:38:36 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6d15-7dd4-901c-cd06652a0491
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d4f-7dd4-901c-d62483c74948
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d8e-7dd4-901c-df3b34b3501e
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6dd1-7dd4-901c-e75b4f510159
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e15-7dd4-901c-ee78dc3f8d84
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e4c-7dd4-901c-f7de12dfe35d
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e85-7dd4-901c-faead581deaf
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6ec5-7dd4-901d-007f28176f67
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f15-7dd4-901d-0c85f0faf7cb
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f60-7dd4-901d-100775eaaa45
+2025-10-24 22:38:36 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5f32-7dd4-901b-e8007f9d538a
+2025-10-24 22:38:36 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6686-7dd4-901c-17c436309844
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-701c-7dd4-901d-28dd66e91c04
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7066-7dd4-901d-4590cd76a323
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70ac-7dd4-901d-4a82d696f032
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70e8-7dd4-901d-5126ae6930c1
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-712c-7dd4-901d-58d1af892de8
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-716c-7dd4-901d-67dd8561b99c
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-71b6-7dd4-901d-68650eae8b37
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7212-7dd4-901d-78c3dc0129c2
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-725c-7dd4-901d-8008894f2774
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72ac-7dd4-901d-8947a00ad175
+2025-10-24 22:38:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72e6-7dd4-901d-9288dceb3716
+2025-10-24 22:38:37 [WARNING] upload_audio — [RETRY] 019a1290-6f9b-7dd4-901d-1b98b88803d0 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:37 [WARNING] upload_audio — [RETRY] 019a1290-7321-7dd4-901d-9ec6f2d06357 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:37 [WARNING] upload_audio — [RETRY] 019a1290-6fda-7dd4-901d-231c845066af — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:38 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6ad3-7dd4-901c-8dfbdd0c6c47
+2025-10-24 22:38:38 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6b1d-7dd4-901c-908ab9e73b41
+2025-10-24 22:38:39 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-73ce-7dd4-901d-b449ecd71baa
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7407-7dd4-901d-bdfcf3ad7ffa
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7440-7dd4-901d-c2d40b1e4824
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7512-7dd4-901d-cbae0138b8bc
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7551-7dd4-901d-d63d1c1aa900
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-758b-7dd4-901d-df5b4f5d7209
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-75f3-7dd4-901d-e3ebf0f3850e
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7632-7dd4-901d-ed17c7932ba3
+2025-10-24 22:38:40 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-736a-7dd4-901d-a27b7954dc7b
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7670-7dd4-901d-f5f4360ba1e0
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-76b6-7dd4-901e-02b81ae41d05
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7709-7dd4-901e-09ba405ca3fa
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77a2-7dd4-901e-232992456d0b
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77f8-7dd4-901e-34fece5a9341
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7834-7dd4-901e-3e9146719c92
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-787c-7dd4-901e-49b6fcf313a5
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-78c2-7dd4-901e-5125653e6aee
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7905-7dd4-901e-5c863dfc09cf
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-794a-7dd4-901e-638409db53cc
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-798c-7dd4-901e-6d8bd2ee14ef
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-79cb-7dd4-901e-73cce549e20f
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ba8-7dd4-901e-8bce7674617f
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7bea-7dd4-901e-9744d199a2c2
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c28-7dd4-901e-9c7fd2cd7902
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c64-7dd4-901e-a6a7e579d318
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ca8-7dd4-901e-aba8f390cfe0
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7cea-7dd4-901e-b37e1cccc77c
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d29-7dd4-901e-bf3cd9690978
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d7a-7dd4-901e-c1aef7f6ef2a
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7db4-7dd4-901e-cd6a6a2b3235
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7dee-7dd4-901e-d054e2d95def
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7e29-7dd4-901e-ded921f901c0
+2025-10-24 22:38:40 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6f9b-7dd4-901d-1b98b88803d0
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7eaa-7dd4-901e-ebf190e89bbf
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ee5-7dd4-901e-f54206d91148
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f24-7dd4-901e-fc322f087a10
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f69-7dd4-901f-07b9eb814603
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7faf-7dd4-901f-0fc15317bd0c
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ff6-7dd4-901f-1a3f92b002ad
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8035-7dd4-901f-229fe3e8fa0b
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8079-7dd4-901f-36c25a044561
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80b6-7dd4-901f-3bb0997c4ece
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80f4-7dd4-901f-40e899cb7c8e
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-815b-7dd4-901f-53b779c47a24
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ae-7dd4-901f-5b48b65ad009
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ed-7dd4-901f-6f5eb05736d0
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8224-7dd4-901f-70127a00797f
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-825f-7dd4-901f-7b92a3ede5a4
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8296-7dd4-901f-8437719e22dc
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-82cc-7dd4-901f-8ad85ce99d39
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8308-7dd4-901f-91665dc5c84e
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-834b-7dd4-901f-9ff4aca9cfa0
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8382-7dd4-901f-a332dbbd2076
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83bb-7dd4-901f-ad7004a31157
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83f3-7dd4-901f-b1f411dbe660
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8441-7dd4-901f-bd26fdaa2733
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8484-7dd4-901f-c1b8eb4dad20
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-877c-7dd4-901f-ce3b830e697b
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87b7-7dd4-901f-d4c0aef084ee
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87f2-7dd4-901f-d915c2b0e5f7
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-882c-7dd4-901f-ec1a0fff38e1
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8867-7dd4-901f-f59bdc31b233
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88a1-7dd4-901f-f83f2040de8f
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88d8-7dd4-9020-02ea67bd0c95
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8910-7dd4-9020-0aa5297454e2
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-894e-7dd4-9020-15b1f9adfac7
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-898b-7dd4-9020-23db76f81ad9
+2025-10-24 22:38:40 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7321-7dd4-901d-9ec6f2d06357
+2025-10-24 22:38:40 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6fda-7dd4-901d-231c845066af
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a11-7dd4-9020-326cb17babf5
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a49-7dd4-9020-3f318bda9f7e
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b12-7dd4-9020-447ebc9072d2
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b4d-7dd4-9020-49c54542e21e
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b82-7dd4-9020-557b438c1911
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c33-7dd4-9020-60b9f71cebaf
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c6a-7dd4-9020-6810baa5a4fa
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ca5-7dd4-9020-740a9dc892e5
+2025-10-24 22:38:40 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ce7-7dd4-9020-7fdaf89e027d
+2025-10-24 22:38:40 [WARNING] upload_audio — [RETRY] 019a1290-7e64-7dd4-901e-e1b7ff720083 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:40 [WARNING] upload_audio — [RETRY] 019a1290-7766-7dd4-901e-1a6348be09ab — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-89d9-7dd4-9020-2934c69160bf
+2025-10-24 22:38:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8d8d-7dd4-9020-90b89890780c
+2025-10-24 22:38:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8dd4-7dd4-9020-9b09c152c4fd
+2025-10-24 22:38:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e0c-7dd4-9020-a2e9eefd1c5f
+2025-10-24 22:38:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e4a-7dd4-9020-a95e142bdd8a
+2025-10-24 22:38:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ffd-7dd4-9020-b9f67c99d97c
+2025-10-24 22:38:42 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8d2e-7dd4-9020-83cb7f71f979
+2025-10-24 22:38:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-90eb-7dd4-9020-cc649bdee709
+2025-10-24 22:38:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9125-7dd4-9020-d021d2491132
+2025-10-24 22:38:42 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8bf2-7dd4-9020-5db8171c0e3d
+2025-10-24 22:38:43 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-9090-7dd4-9020-c63b580cc718
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-91f2-7dd4-9020-f167db279bb0
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9235-7dd4-9020-fdad42da97d1
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-927d-7dd4-9021-0c6d071f8d4f
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92b8-7dd4-9021-13f88a4358c8
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92ee-7dd4-9021-1d4071f6c41b
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9321-7dd4-9021-25bac18c1620
+2025-10-24 22:38:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9357-7dd4-9021-2c6fb97fd9b3
+2025-10-24 22:38:43 [WARNING] upload_audio — [RETRY] 019a1290-7766-7dd4-901e-1a6348be09ab — attempt 2/3, retrying in 4s...
+2025-10-24 22:38:43 [WARNING] upload_audio — [RETRY] 019a1290-916e-7dd4-9020-e1c763499314 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:43 [WARNING] upload_audio — [RETRY] 019a1290-7e64-7dd4-901e-e1b7ff720083 — attempt 2/3, retrying in 4s...
+2025-10-24 22:38:43 [WARNING] upload_audio — [RETRY] 019a1290-91af-7dd4-9020-eaee1e963e17 — attempt 1/3, retrying in 2s...
+2025-10-24 22:38:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-916e-7dd4-9020-e1c763499314
+2025-10-24 22:38:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-91af-7dd4-9020-eaee1e963e17
+2025-10-24 22:38:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7e64-7dd4-901e-e1b7ff720083
+2025-10-24 22:38:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7766-7dd4-901e-1a6348be09ab
+2025-10-24 22:38:49 [SUCCESS] upload_audio — SUCCESS: Upload complete — 64 succeeded, 195 failed
+2025-10-24 22:38:49 [INFO] upload_audio — ✅ Upload complete — 64 succeeded, 195 failed
+2025-10-24 22:38:49 [WARNING] upload_audio — ⚠️  Saved 195 failed uploads to failed_uploads.csv
+2025-10-24 22:38:49 [SUCCESS] __main__ — SUCCESS: Uploaded all recordings in parallel.
+2025-10-24 22:38:49 [SUCCESS] __main__ — SUCCESS: Saved DataFrame to calls_with_recordings.csv
+2025-10-24 22:38:49 [INFO] __main__ — ✅ ETL complete. Saved to calls_with_recordings.csv
+2025-10-24 22:38:49 [INFO] __main__ — ⬆️ Loading transformed data to Supabase...
+2025-10-24 22:38:49 [INFO] load — 🔍 Validating DataFrame schema before load...
+2025-10-24 22:38:49 [SUCCESS] load — ✅ All required columns present.
+2025-10-24 22:38:49 [WARNING] load — ⚠️ Extra columns found (not in expected schema): ['assistant_id', 'org_id', 'campaign_id', 'ended_reason', 'created_at', 'started_at', 'ended_at', 'updated_at', 'stereo_recording_url']
+2025-10-24 22:38:49 [SUCCESS] load — ✅ Schema validation passed.
+2025-10-24 22:38:49 [INFO] load — 🚀 Starting upsert of 259 records into table 'ai_calls'...
+2025-10-24 22:38:49 [INFO] load — 🔹 Processing batch 1 (259 rows)...
+2025-10-24 22:38:49 [ERROR] load — ❌ Load to Supabase failed after 0 successes: Out of range float values are not JSON compliant: nan
+2025-10-24 22:38:49 [WARNING] __main__ — ⚠️ Load completed with 259 failed records.
+2025-10-24 22:38:49 [INFO] utils.summary_utils — 
+══════════════════════════════════════════════════════════════════════
+2025-10-24 22:38:49 [INFO] utils.summary_utils — 📊 ETL PIPELINE SUMMARY
+2025-10-24 22:38:49 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 22:38:49 [SUCCESS] utils.summary_utils — 🟢 Extracted   : 259 records
+2025-10-24 22:38:49 [SUCCESS] utils.summary_utils — 🧩 Transformed : 259 records
+2025-10-24 22:38:49 [SUCCESS] utils.summary_utils — ☁️  Uploaded    : 64 succeeded, 195 failed
+2025-10-24 22:38:49 [SUCCESS] utils.summary_utils — 💾 Loaded      : 0 succeeded, 259 failed
+2025-10-24 22:38:49 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 22:38:49 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
+
+2025-10-24 22:49:34 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 22:49:34 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 22:49:35 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 22:49:35 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 22:49:35 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 22:49:35 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 22:49:35 [INFO] __main__ — Fetching calls from VAPI v2...
+2025-10-24 22:49:35 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 22:49:39 [INFO] extract — [Page 1] Retrieved 259 calls.
+2025-10-24 22:49:39 [INFO] extract — ✅ Extraction complete — total 259 calls fetched.
+2025-10-24 22:49:39 [SUCCESS] extract — SUCCESS: Extracted 259 calls from VAPI API.
+2025-10-24 22:49:39 [SUCCESS] __main__ — SUCCESS: Extracted 259 calls from VAPI.
+2025-10-24 22:49:39 [INFO] __main__ — Total calls fetched: 259
+2025-10-24 22:49:39 [INFO] __main__ — Transforming calls...
+2025-10-24 22:49:39 [INFO] transform — Transforming 259 raw call records...
+2025-10-24 22:49:39 [INFO] transform — ✅ Transform complete — 259 rows created.
+2025-10-24 22:49:39 [SUCCESS] transform — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 22:49:39 [SUCCESS] __main__ — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 22:49:39 [INFO] __main__ — Uploading recordings in parallel...
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1dcb-700b-bb30-b722136062e4
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1f15-700b-bb30-c69134021952
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-203f-700b-bb30-c838c7a1c80e
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-22a5-700b-bb30-d8f35e911886
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2149-700b-bb30-d7e83f4c7e28
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-23b8-700b-bb30-e8579889e561
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-24d2-700b-bb30-f0d725a535c7
+2025-10-24 22:49:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-288e-700b-bb30-fcae95322d06
+2025-10-24 22:49:43 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a07-700b-bb31-0e4b89c3b721
+2025-10-24 22:49:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-29be-700b-bb31-05ab6f9866d5
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2adf-700b-bb31-272a2be7139c
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b22-700b-bb31-289ad328203d
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b61-700b-bb31-3641caed71d6
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2e73-700b-bb31-39e9f3720cc2
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2ebb-700b-bb31-4426f336ae5b
+2025-10-24 22:49:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1b3a-700b-bb30-9c30e437f1f7
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f40-700b-bb31-56e451855dfa
+2025-10-24 22:49:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f7e-700b-bb31-5b210d2be971
+2025-10-24 22:49:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1c7a-700b-bb30-aab34eca7301
+2025-10-24 22:49:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a54-700b-bb31-138ce76421a5
+2025-10-24 22:49:45 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a98-700b-bb31-1d0cc18fdece
+2025-10-24 22:49:46 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2efa-700b-bb31-4896c16ce484
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-30df-700b-bb31-8244912411c1
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3134-700b-bb31-8c5c3de4a5c7
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3178-700b-bb31-94c2b56e0cf1
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31b8-700b-bb31-9aa269c4a13d
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31fa-700b-bb31-a7e818d196fd
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-323a-700b-bb31-a812ba6f0527
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3281-700b-bb31-b2d34a16ea9f
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-32c3-700b-bb31-b8ca764c4ceb
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-330f-700b-bb31-c54681589133
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-335a-700b-bb31-ca28d45e5a94
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33a6-700b-bb31-d143d0f6893a
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33fa-700b-bb31-d99abd6ed8b7
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-343e-700b-bb31-e2316d6fed69
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3484-700b-bb31-eae72c39b95d
+2025-10-24 22:49:46 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2fc5-700b-bb31-653f69003ea5
+2025-10-24 22:49:46 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3518-700b-bb31-fc99cc0f52c6
+2025-10-24 22:49:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-305a-700b-bb31-75d5f14d7e8d
+2025-10-24 22:49:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3017-700b-bb31-68b3dd8412ac
+2025-10-24 22:49:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35b1-700b-bb32-08eb659d87fd
+2025-10-24 22:49:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35f2-700b-bb32-11647e3a19b5
+2025-10-24 22:49:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3643-700b-bb32-1bf5f01b89ec
+2025-10-24 22:49:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-368f-700b-bb32-238ea56c9dd7
+2025-10-24 22:49:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-36e0-700b-bb32-29210275a4f3
+2025-10-24 22:49:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3099-700b-bb31-7aeeccf6092a
+2025-10-24 22:49:48 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-34d2-700b-bb31-f28d67388b1b
+2025-10-24 22:49:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3562-700b-bb32-01d8d8bb9aaa
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-386e-700b-bb32-5532fc4ea003
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38b2-700b-bb32-5843a404282b
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38f6-700b-bb32-61ed7e32a632
+2025-10-24 22:49:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37a0-700b-bb32-3d588ab71dc7
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3975-700b-bb32-72543a9dbbbe
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-39bc-700b-bb32-7e53cfbe5ef2
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3e13-700b-bb32-875a6b9cdee1
+2025-10-24 22:49:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3760-700b-bb32-30d17433ae86
+2025-10-24 22:49:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37e8-700b-bb32-427eb6f73cf5
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3ee8-700b-bb32-9ee7f36233b6
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f2e-700b-bb32-a5528bfef6a2
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f96-700b-bb32-ab4cec67c406
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-4f38-700b-bb32-b0fc570b72a7
+2025-10-24 22:49:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5108-700b-bb32-c1115550cc4e
+2025-10-24 22:49:50 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3831-700b-bb32-4dd841fadab4
+2025-10-24 22:49:51 [WARNING] upload_audio — [RETRY] 019a1250-3e60-700b-bb32-8e402d881ea4 — attempt 1/3, retrying in 2s...
+2025-10-24 22:49:51 [WARNING] upload_audio — [RETRY] 019a1250-3ea6-700b-bb32-966c4bcbbd05 — attempt 1/3, retrying in 2s...
+2025-10-24 22:49:51 [WARNING] upload_audio — [RETRY] 019a1250-3936-700b-bb32-69eeb99fcc88 — attempt 1/3, retrying in 2s...
+2025-10-24 22:49:51 [WARNING] upload_audio — [RETRY] 019a1250-51a0-700b-bb32-c89762d5b183 — attempt 1/3, retrying in 2s...
+2025-10-24 22:49:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5213-700b-bb32-d5bdcb7bfa54
+2025-10-24 22:49:54 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5307-700b-bb32-e52448d01abf
+2025-10-24 22:49:56 [WARNING] upload_audio — [RETRY] 019a1250-3e60-700b-bb32-8e402d881ea4 — attempt 2/3, retrying in 4s...
+2025-10-24 22:49:56 [WARNING] upload_audio — [RETRY] 019a1250-53a9-700b-bb32-ef4c1a671788 — attempt 1/3, retrying in 2s...
+2025-10-24 22:49:56 [WARNING] upload_audio — [RETRY] 019a1250-3ea6-700b-bb32-966c4bcbbd05 — attempt 2/3, retrying in 4s...
+2025-10-24 22:49:56 [WARNING] upload_audio — [RETRY] 019a1250-3936-700b-bb32-69eeb99fcc88 — attempt 2/3, retrying in 4s...
+2025-10-24 22:49:56 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-51a0-700b-bb32-c89762d5b183
+2025-10-24 22:49:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-53f6-700b-bb32-f381cbdde096
+2025-10-24 22:49:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-543a-700b-bb32-fa9adabb9db2
+2025-10-24 22:49:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5490-700b-bb33-079d80ad21ed
+2025-10-24 22:49:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-54d1-700b-bb33-0e68dab9ad68
+2025-10-24 22:49:57 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-551a-700b-bb33-137d3846264a
+2025-10-24 22:49:57 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5568-700b-bb33-19fca30525f2
+2025-10-24 22:49:59 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-53a9-700b-bb32-ef4c1a671788
+2025-10-24 22:49:59 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55b2-700b-bb33-24a42bde0984
+2025-10-24 22:50:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5651-700b-bb33-32d9cf690002
+2025-10-24 22:50:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-56b6-700b-bb33-3b1311884889
+2025-10-24 22:50:01 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55f8-700b-bb33-2b1c413d1401
+2025-10-24 22:50:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5740-700b-bb33-498beb4ba7c4
+2025-10-24 22:50:02 [ERROR] upload_audio — [FAILED] 019a1250-3e60-700b-bb32-8e402d881ea4: all retries exhausted — Upload failed for 019a1250-3e60-700b-bb32-8e402d881ea4: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2025-10-24 22:50:02 [ERROR] upload_audio — [FAILED] 019a1250-3ea6-700b-bb32-966c4bcbbd05: all retries exhausted — Upload failed for 019a1250-3ea6-700b-bb32-966c4bcbbd05: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2025-10-24 22:50:02 [ERROR] upload_audio — [FAILED] 019a1250-3936-700b-bb32-69eeb99fcc88: all retries exhausted — Upload failed for 019a1250-3936-700b-bb32-69eeb99fcc88: [WinError 10035] A non-blocking socket operation could not be completed immediately
+2025-10-24 22:50:02 [WARNING] upload_audio — [RETRY] 019a1250-56f4-700b-bb33-46152ba8b00a — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-57d5-700b-bb33-592048bb88e3
+2025-10-24 22:50:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-581e-700b-bb33-630f36384a03
+2025-10-24 22:50:02 [WARNING] upload_audio — [RETRY] 019a1250-578a-700b-bb33-5031b6c745d2 — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-58c0-700b-bb33-7b74ebf8a8dd
+2025-10-24 22:50:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-59ed-700b-bb33-9ffdbbcdb530
+2025-10-24 22:50:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5a3e-700b-bb33-a0ebc26d93f6
+2025-10-24 22:50:04 [WARNING] upload_audio — [RETRY] 019a1250-586d-700b-bb33-6e03614a4797 — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:04 [WARNING] upload_audio — [RETRY] 019a1250-590f-700b-bb33-8110f6eb4e53 — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:04 [WARNING] upload_audio — [RETRY] 019a1250-5a88-700b-bb33-abcaaa57eb53 — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-56f4-700b-bb33-46152ba8b00a
+2025-10-24 22:50:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5ad4-700b-bb33-b293400b18c4
+2025-10-24 22:50:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-578a-700b-bb33-5031b6c745d2
+2025-10-24 22:50:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5b6e-700b-bb33-c6e649547fa0
+2025-10-24 22:50:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5bbd-700b-bb33-cfd981c0c472
+2025-10-24 22:50:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5c0a-700b-bb33-d14223e69bf7
+2025-10-24 22:50:07 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5c67-700b-bb33-dca08e8cb292
+2025-10-24 22:50:07 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5b19-700b-bb33-ba75c98b8b47
+2025-10-24 22:50:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-60ca-700b-bb34-3f9605dde4bd
+2025-10-24 22:50:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6214-700b-bb34-5e9402e1018a
+2025-10-24 22:50:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-63cb-700b-bb34-8bc06b2475b1
+2025-10-24 22:50:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6583-700b-bb34-b7befe401f1f
+2025-10-24 22:50:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6867-700b-bb34-f8058a151202
+2025-10-24 22:50:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-69e0-700b-bb35-1afeee533c02
+2025-10-24 22:50:07 [WARNING] upload_audio — [RETRY] 019a1250-590f-700b-bb33-8110f6eb4e53 — attempt 2/3, retrying in 4s...
+2025-10-24 22:50:07 [WARNING] upload_audio — [RETRY] 019a1250-5a88-700b-bb33-abcaaa57eb53 — attempt 2/3, retrying in 4s...
+2025-10-24 22:50:07 [WARNING] upload_audio — [RETRY] 019a1250-586d-700b-bb33-6e03614a4797 — attempt 2/3, retrying in 4s...
+2025-10-24 22:50:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6bbb-700b-bb35-4dc680ba3d7e
+2025-10-24 22:50:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6c56-700b-bb35-5a9c294503a5
+2025-10-24 22:50:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5cba-700b-bb33-e510d159eb4b
+2025-10-24 22:50:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6d75-700b-bb35-7a25d642847f
+2025-10-24 22:50:10 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1267-770b-7ffb-981e-8e40ae2d9ea1
+2025-10-24 22:50:10 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6c9c-700b-bb35-666489f41faf
+2025-10-24 22:50:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-585b-7dd4-901b-c3d4c11b3103
+2025-10-24 22:50:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1289-0b29-7ffb-9838-17ae0a248c4b
+2025-10-24 22:50:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-58c5-7dd4-901b-d7b1ae80dee3
+2025-10-24 22:50:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-5913-7dd4-901b-d955129e2d67
+2025-10-24 22:50:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5a88-700b-bb33-abcaaa57eb53
+2025-10-24 22:50:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-65a4-7dd4-901b-ff1a26e7cdb5
+2025-10-24 22:50:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-590f-700b-bb33-8110f6eb4e53
+2025-10-24 22:50:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-586d-700b-bb33-6e03614a4797
+2025-10-24 22:50:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5f32-7dd4-901b-e8007f9d538a
+2025-10-24 22:50:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6723-7dd4-901c-210110fe3316
+2025-10-24 22:50:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5eee-7dd4-901b-e4cddee627b5
+2025-10-24 22:50:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6766-7dd4-901c-296a5051e9db
+2025-10-24 22:50:15 [WARNING] upload_audio — [RETRY] 019a1290-664f-7dd4-901c-0916aeed02ec — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:15 [WARNING] upload_audio — [RETRY] 019a1290-6686-7dd4-901c-17c436309844 — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ec-7dd4-901c-38ec2c2eac9f
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-68c3-7dd4-901c-4c69d7f3fc0b
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6903-7dd4-901c-51523ee52f58
+2025-10-24 22:50:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-66d9-7dd4-901c-1bda3a511453
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6940-7dd4-901c-5df2329fc43b
+2025-10-24 22:50:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ae-7dd4-901c-307470c9b008
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-69dc-7dd4-901c-6f066378a5b5
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a18-7dd4-901c-720ceda3bd66
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a59-7dd4-901c-7c09fe069b6c
+2025-10-24 22:50:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a92-7dd4-901c-80162b7f667f
+2025-10-24 22:50:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6ad3-7dd4-901c-8dfbdd0c6c47
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6b94-7dd4-901c-a1c93d1603eb
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6bed-7dd4-901c-aca8aeabc18d
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c38-7dd4-901c-b0d58a99ceb9
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c8c-7dd4-901c-bbae67f910cb
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6cca-7dd4-901c-c1fc2f62e192
+2025-10-24 22:50:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6985-7dd4-901c-66ba181ee4af
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d4f-7dd4-901c-d62483c74948
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d8e-7dd4-901c-df3b34b3501e
+2025-10-24 22:50:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6b1d-7dd4-901c-908ab9e73b41
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6dd1-7dd4-901c-e75b4f510159
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e15-7dd4-901c-ee78dc3f8d84
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e4c-7dd4-901c-f7de12dfe35d
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e85-7dd4-901c-faead581deaf
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6ec5-7dd4-901d-007f28176f67
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f15-7dd4-901d-0c85f0faf7cb
+2025-10-24 22:50:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f60-7dd4-901d-100775eaaa45
+2025-10-24 22:50:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-664f-7dd4-901c-0916aeed02ec
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-701c-7dd4-901d-28dd66e91c04
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7066-7dd4-901d-4590cd76a323
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70ac-7dd4-901d-4a82d696f032
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70e8-7dd4-901d-5126ae6930c1
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-712c-7dd4-901d-58d1af892de8
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-716c-7dd4-901d-67dd8561b99c
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-71b6-7dd4-901d-68650eae8b37
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7212-7dd4-901d-78c3dc0129c2
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-725c-7dd4-901d-8008894f2774
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72ac-7dd4-901d-8947a00ad175
+2025-10-24 22:50:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72e6-7dd4-901d-9288dceb3716
+2025-10-24 22:50:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6686-7dd4-901c-17c436309844
+2025-10-24 22:50:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6d15-7dd4-901c-cd06652a0491
+2025-10-24 22:50:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6f9b-7dd4-901d-1b98b88803d0
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7407-7dd4-901d-bdfcf3ad7ffa
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7440-7dd4-901d-c2d40b1e4824
+2025-10-24 22:50:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6fda-7dd4-901d-231c845066af
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7512-7dd4-901d-cbae0138b8bc
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7551-7dd4-901d-d63d1c1aa900
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-758b-7dd4-901d-df5b4f5d7209
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-75f3-7dd4-901d-e3ebf0f3850e
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7632-7dd4-901d-ed17c7932ba3
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7670-7dd4-901d-f5f4360ba1e0
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-76b6-7dd4-901e-02b81ae41d05
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7709-7dd4-901e-09ba405ca3fa
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77a2-7dd4-901e-232992456d0b
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77f8-7dd4-901e-34fece5a9341
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7834-7dd4-901e-3e9146719c92
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-787c-7dd4-901e-49b6fcf313a5
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-78c2-7dd4-901e-5125653e6aee
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7905-7dd4-901e-5c863dfc09cf
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-794a-7dd4-901e-638409db53cc
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-798c-7dd4-901e-6d8bd2ee14ef
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-79cb-7dd4-901e-73cce549e20f
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ba8-7dd4-901e-8bce7674617f
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7bea-7dd4-901e-9744d199a2c2
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c28-7dd4-901e-9c7fd2cd7902
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c64-7dd4-901e-a6a7e579d318
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ca8-7dd4-901e-aba8f390cfe0
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7cea-7dd4-901e-b37e1cccc77c
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d29-7dd4-901e-bf3cd9690978
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d7a-7dd4-901e-c1aef7f6ef2a
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7db4-7dd4-901e-cd6a6a2b3235
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7dee-7dd4-901e-d054e2d95def
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7e29-7dd4-901e-ded921f901c0
+2025-10-24 22:50:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-736a-7dd4-901d-a27b7954dc7b
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7eaa-7dd4-901e-ebf190e89bbf
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ee5-7dd4-901e-f54206d91148
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f24-7dd4-901e-fc322f087a10
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f69-7dd4-901f-07b9eb814603
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7faf-7dd4-901f-0fc15317bd0c
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ff6-7dd4-901f-1a3f92b002ad
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8035-7dd4-901f-229fe3e8fa0b
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8079-7dd4-901f-36c25a044561
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80b6-7dd4-901f-3bb0997c4ece
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80f4-7dd4-901f-40e899cb7c8e
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-815b-7dd4-901f-53b779c47a24
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ae-7dd4-901f-5b48b65ad009
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ed-7dd4-901f-6f5eb05736d0
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8224-7dd4-901f-70127a00797f
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-825f-7dd4-901f-7b92a3ede5a4
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8296-7dd4-901f-8437719e22dc
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-82cc-7dd4-901f-8ad85ce99d39
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8308-7dd4-901f-91665dc5c84e
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-834b-7dd4-901f-9ff4aca9cfa0
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8382-7dd4-901f-a332dbbd2076
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83bb-7dd4-901f-ad7004a31157
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83f3-7dd4-901f-b1f411dbe660
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8441-7dd4-901f-bd26fdaa2733
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8484-7dd4-901f-c1b8eb4dad20
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-877c-7dd4-901f-ce3b830e697b
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87b7-7dd4-901f-d4c0aef084ee
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87f2-7dd4-901f-d915c2b0e5f7
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-882c-7dd4-901f-ec1a0fff38e1
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8867-7dd4-901f-f59bdc31b233
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88a1-7dd4-901f-f83f2040de8f
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88d8-7dd4-9020-02ea67bd0c95
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8910-7dd4-9020-0aa5297454e2
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-894e-7dd4-9020-15b1f9adfac7
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-898b-7dd4-9020-23db76f81ad9
+2025-10-24 22:50:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7321-7dd4-901d-9ec6f2d06357
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a11-7dd4-9020-326cb17babf5
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a49-7dd4-9020-3f318bda9f7e
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b12-7dd4-9020-447ebc9072d2
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b4d-7dd4-9020-49c54542e21e
+2025-10-24 22:50:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b82-7dd4-9020-557b438c1911
+2025-10-24 22:50:21 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-73ce-7dd4-901d-b449ecd71baa
+2025-10-24 22:50:21 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c33-7dd4-9020-60b9f71cebaf
+2025-10-24 22:50:21 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c6a-7dd4-9020-6810baa5a4fa
+2025-10-24 22:50:21 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ca5-7dd4-9020-740a9dc892e5
+2025-10-24 22:50:21 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ce7-7dd4-9020-7fdaf89e027d
+2025-10-24 22:50:22 [WARNING] upload_audio — [RETRY] 019a1290-8bf2-7dd4-9020-5db8171c0e3d — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:22 [WARNING] upload_audio — [RETRY] 019a1290-89d9-7dd4-9020-2934c69160bf — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:22 [WARNING] upload_audio — [RETRY] 019a1290-7e64-7dd4-901e-e1b7ff720083 — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:22 [WARNING] upload_audio — [RETRY] 019a1290-7766-7dd4-901e-1a6348be09ab — attempt 1/3, retrying in 2s...
+2025-10-24 22:50:23 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8d2e-7dd4-9020-83cb7f71f979
+2025-10-24 22:50:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8d8d-7dd4-9020-90b89890780c
+2025-10-24 22:50:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8dd4-7dd4-9020-9b09c152c4fd
+2025-10-24 22:50:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e0c-7dd4-9020-a2e9eefd1c5f
+2025-10-24 22:50:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e4a-7dd4-9020-a95e142bdd8a
+2025-10-24 22:50:23 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ffd-7dd4-9020-b9f67c99d97c
+2025-10-24 22:50:24 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-9090-7dd4-9020-c63b580cc718
+2025-10-24 22:50:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-90eb-7dd4-9020-cc649bdee709
+2025-10-24 22:50:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9125-7dd4-9020-d021d2491132
+2025-10-24 22:50:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-916e-7dd4-9020-e1c763499314
+2025-10-24 22:50:26 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-89d9-7dd4-9020-2934c69160bf
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-91f2-7dd4-9020-f167db279bb0
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9235-7dd4-9020-fdad42da97d1
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-927d-7dd4-9021-0c6d071f8d4f
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92b8-7dd4-9021-13f88a4358c8
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92ee-7dd4-9021-1d4071f6c41b
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9321-7dd4-9021-25bac18c1620
+2025-10-24 22:50:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9357-7dd4-9021-2c6fb97fd9b3
+2025-10-24 22:50:26 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8bf2-7dd4-9020-5db8171c0e3d
+2025-10-24 22:50:27 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7766-7dd4-901e-1a6348be09ab
+2025-10-24 22:50:27 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7e64-7dd4-901e-e1b7ff720083
+2025-10-24 22:50:27 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-91af-7dd4-9020-eaee1e963e17
+2025-10-24 22:50:27 [SUCCESS] upload_audio — SUCCESS: Upload complete — 62 succeeded, 197 failed
+2025-10-24 22:50:27 [INFO] upload_audio — ✅ Upload complete — 62 succeeded, 197 failed
+2025-10-24 22:50:27 [WARNING] upload_audio — ⚠️  Saved 197 failed uploads to failed_uploads.csv
+2025-10-24 22:50:27 [SUCCESS] __main__ — SUCCESS: Uploaded all recordings in parallel.
+2025-10-24 22:50:27 [SUCCESS] __main__ — SUCCESS: Saved DataFrame to calls_with_recordings.csv
+2025-10-24 22:50:27 [INFO] __main__ — ✅ ETL complete. Saved to calls_with_recordings.csv
+2025-10-24 22:50:27 [INFO] __main__ — ⬆️ Loading transformed data to Supabase...
+2025-10-24 22:50:27 [INFO] load — 🔍 Validating DataFrame schema before load...
+2025-10-24 22:50:27 [SUCCESS] load — ✅ All required columns present.
+2025-10-24 22:50:27 [WARNING] load — ⚠️ Extra columns found (not in expected schema): ['assistant_id', 'org_id', 'campaign_id', 'ended_reason', 'created_at', 'started_at', 'ended_at', 'updated_at', 'stereo_recording_url']
+2025-10-24 22:50:27 [SUCCESS] load — ✅ Schema validation passed.
+2025-10-24 22:50:27 [INFO] load — 🚀 Starting upsert of 259 records into table 'ai_calls'...
+2025-10-24 22:50:27 [INFO] load — 🔹 Processing batch 1 (259 rows)...
+2025-10-24 22:50:27 [ERROR] load — ❌ Load to Supabase failed after 0 successes: Out of range float values are not JSON compliant: nan
+2025-10-24 22:50:27 [WARNING] __main__ — ⚠️ Load completed with 259 failed records.
+2025-10-24 22:50:27 [INFO] utils.summary_utils — 
+══════════════════════════════════════════════════════════════════════
+2025-10-24 22:50:27 [INFO] utils.summary_utils — 📊 ETL PIPELINE SUMMARY
+2025-10-24 22:50:27 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 22:50:27 [SUCCESS] utils.summary_utils — 🟢 Extracted   : 259 records
+2025-10-24 22:50:27 [SUCCESS] utils.summary_utils — 🧩 Transformed : 259 records
+2025-10-24 22:50:27 [SUCCESS] utils.summary_utils — ☁️  Uploaded    : 62 succeeded, 197 failed
+2025-10-24 22:50:27 [SUCCESS] utils.summary_utils — 💾 Loaded      : 0 succeeded, 259 failed
+2025-10-24 22:50:27 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 22:50:27 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
+
+2025-10-24 23:06:30 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 23:06:30 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 23:06:30 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 23:06:30 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 23:06:30 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 23:06:30 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 23:06:30 [INFO] __main__ — Fetching calls from VAPI v2...
+2025-10-24 23:06:30 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 23:06:33 [INFO] extract — [Page 1] Retrieved 259 calls.
+2025-10-24 23:06:33 [INFO] extract — ✅ Extraction complete — total 259 calls fetched.
+2025-10-24 23:06:33 [SUCCESS] extract — SUCCESS: Extracted 259 calls from VAPI API.
+2025-10-24 23:06:33 [SUCCESS] __main__ — SUCCESS: Extracted 259 calls from VAPI.
+2025-10-24 23:06:33 [INFO] __main__ — Total calls fetched: 259
+2025-10-24 23:06:33 [INFO] __main__ — Transforming calls...
+2025-10-24 23:06:33 [INFO] transform — Transforming 259 raw call records...
+2025-10-24 23:06:33 [INFO] transform — ✅ Transform complete — 259 rows created.
+2025-10-24 23:06:33 [SUCCESS] transform — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 23:06:33 [SUCCESS] __main__ — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 23:06:33 [INFO] __main__ — Uploading recordings in parallel...
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1dcb-700b-bb30-b722136062e4
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1f15-700b-bb30-c69134021952
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-203f-700b-bb30-c838c7a1c80e
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-22a5-700b-bb30-d8f35e911886
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2149-700b-bb30-d7e83f4c7e28
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-23b8-700b-bb30-e8579889e561
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-24d2-700b-bb30-f0d725a535c7
+2025-10-24 23:06:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-288e-700b-bb30-fcae95322d06
+2025-10-24 23:06:40 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a07-700b-bb31-0e4b89c3b721
+2025-10-24 23:06:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-29be-700b-bb31-05ab6f9866d5
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2adf-700b-bb31-272a2be7139c
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b22-700b-bb31-289ad328203d
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b61-700b-bb31-3641caed71d6
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2e73-700b-bb31-39e9f3720cc2
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2ebb-700b-bb31-4426f336ae5b
+2025-10-24 23:06:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1b3a-700b-bb30-9c30e437f1f7
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f40-700b-bb31-56e451855dfa
+2025-10-24 23:06:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f7e-700b-bb31-5b210d2be971
+2025-10-24 23:06:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1c7a-700b-bb30-aab34eca7301
+2025-10-24 23:06:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a54-700b-bb31-138ce76421a5
+2025-10-24 23:06:46 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a98-700b-bb31-1d0cc18fdece
+2025-10-24 23:06:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2efa-700b-bb31-4896c16ce484
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-30df-700b-bb31-8244912411c1
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3134-700b-bb31-8c5c3de4a5c7
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3178-700b-bb31-94c2b56e0cf1
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31b8-700b-bb31-9aa269c4a13d
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31fa-700b-bb31-a7e818d196fd
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-323a-700b-bb31-a812ba6f0527
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3281-700b-bb31-b2d34a16ea9f
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-32c3-700b-bb31-b8ca764c4ceb
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-330f-700b-bb31-c54681589133
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-335a-700b-bb31-ca28d45e5a94
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33a6-700b-bb31-d143d0f6893a
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33fa-700b-bb31-d99abd6ed8b7
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-343e-700b-bb31-e2316d6fed69
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3484-700b-bb31-eae72c39b95d
+2025-10-24 23:06:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2fc5-700b-bb31-653f69003ea5
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3518-700b-bb31-fc99cc0f52c6
+2025-10-24 23:06:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-305a-700b-bb31-75d5f14d7e8d
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35b1-700b-bb32-08eb659d87fd
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35f2-700b-bb32-11647e3a19b5
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3643-700b-bb32-1bf5f01b89ec
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-368f-700b-bb32-238ea56c9dd7
+2025-10-24 23:06:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-36e0-700b-bb32-29210275a4f3
+2025-10-24 23:06:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3017-700b-bb31-68b3dd8412ac
+2025-10-24 23:06:50 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3099-700b-bb31-7aeeccf6092a
+2025-10-24 23:06:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-34d2-700b-bb31-f28d67388b1b
+2025-10-24 23:06:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3562-700b-bb32-01d8d8bb9aaa
+2025-10-24 23:06:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-386e-700b-bb32-5532fc4ea003
+2025-10-24 23:06:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38b2-700b-bb32-5843a404282b
+2025-10-24 23:06:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38f6-700b-bb32-61ed7e32a632
+2025-10-24 23:06:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3760-700b-bb32-30d17433ae86
+2025-10-24 23:06:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3975-700b-bb32-72543a9dbbbe
+2025-10-24 23:06:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-39bc-700b-bb32-7e53cfbe5ef2
+2025-10-24 23:06:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3e13-700b-bb32-875a6b9cdee1
+2025-10-24 23:06:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37a0-700b-bb32-3d588ab71dc7
+2025-10-24 23:06:55 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37e8-700b-bb32-427eb6f73cf5
+2025-10-24 23:06:55 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3ee8-700b-bb32-9ee7f36233b6
+2025-10-24 23:06:55 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f2e-700b-bb32-a5528bfef6a2
+2025-10-24 23:06:55 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f96-700b-bb32-ab4cec67c406
+2025-10-24 23:06:55 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-4f38-700b-bb32-b0fc570b72a7
+2025-10-24 23:06:55 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5108-700b-bb32-c1115550cc4e
+2025-10-24 23:06:59 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3831-700b-bb32-4dd841fadab4
+2025-10-24 23:06:59 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3936-700b-bb32-69eeb99fcc88
+2025-10-24 23:06:59 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3e60-700b-bb32-8e402d881ea4
+2025-10-24 23:07:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-51a0-700b-bb32-c89762d5b183
+2025-10-24 23:07:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-53f6-700b-bb32-f381cbdde096
+2025-10-24 23:07:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-543a-700b-bb32-fa9adabb9db2
+2025-10-24 23:07:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3ea6-700b-bb32-966c4bcbbd05
+2025-10-24 23:07:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5490-700b-bb33-079d80ad21ed
+2025-10-24 23:07:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-54d1-700b-bb33-0e68dab9ad68
+2025-10-24 23:07:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5568-700b-bb33-19fca30525f2
+2025-10-24 23:07:04 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5213-700b-bb32-d5bdcb7bfa54
+2025-10-24 23:07:04 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5307-700b-bb32-e52448d01abf
+2025-10-24 23:07:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-53a9-700b-bb32-ef4c1a671788
+2025-10-24 23:07:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-56b6-700b-bb33-3b1311884889
+2025-10-24 23:07:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-551a-700b-bb33-137d3846264a
+2025-10-24 23:07:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5740-700b-bb33-498beb4ba7c4
+2025-10-24 23:07:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55b2-700b-bb33-24a42bde0984
+2025-10-24 23:07:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-57d5-700b-bb33-592048bb88e3
+2025-10-24 23:07:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-581e-700b-bb33-630f36384a03
+2025-10-24 23:07:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55f8-700b-bb33-2b1c413d1401
+2025-10-24 23:07:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-58c0-700b-bb33-7b74ebf8a8dd
+2025-10-24 23:07:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5651-700b-bb33-32d9cf690002
+2025-10-24 23:07:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-59ed-700b-bb33-9ffdbbcdb530
+2025-10-24 23:07:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5a3e-700b-bb33-a0ebc26d93f6
+2025-10-24 23:07:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-56f4-700b-bb33-46152ba8b00a
+2025-10-24 23:07:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5ad4-700b-bb33-b293400b18c4
+2025-10-24 23:07:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-578a-700b-bb33-5031b6c745d2
+2025-10-24 23:07:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5b6e-700b-bb33-c6e649547fa0
+2025-10-24 23:07:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5bbd-700b-bb33-cfd981c0c472
+2025-10-24 23:07:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5c0a-700b-bb33-d14223e69bf7
+2025-10-24 23:07:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-586d-700b-bb33-6e03614a4797
+2025-10-24 23:07:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-590f-700b-bb33-8110f6eb4e53
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-60ca-700b-bb34-3f9605dde4bd
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6214-700b-bb34-5e9402e1018a
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-63cb-700b-bb34-8bc06b2475b1
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6583-700b-bb34-b7befe401f1f
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6867-700b-bb34-f8058a151202
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-69e0-700b-bb35-1afeee533c02
+2025-10-24 23:07:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5a88-700b-bb33-abcaaa57eb53
+2025-10-24 23:07:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6c56-700b-bb35-5a9c294503a5
+2025-10-24 23:07:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5c67-700b-bb33-dca08e8cb292
+2025-10-24 23:07:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6d75-700b-bb35-7a25d642847f
+2025-10-24 23:07:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5b19-700b-bb33-ba75c98b8b47
+2025-10-24 23:07:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5cba-700b-bb33-e510d159eb4b
+2025-10-24 23:07:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-585b-7dd4-901b-c3d4c11b3103
+2025-10-24 23:07:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6c9c-700b-bb35-666489f41faf
+2025-10-24 23:07:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-5913-7dd4-901b-d955129e2d67
+2025-10-24 23:07:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6bbb-700b-bb35-4dc680ba3d7e
+2025-10-24 23:07:21 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1267-770b-7ffb-981e-8e40ae2d9ea1
+2025-10-24 23:07:21 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-65a4-7dd4-901b-ff1a26e7cdb5
+2025-10-24 23:07:23 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-58c5-7dd4-901b-d7b1ae80dee3
+2025-10-24 23:07:23 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1289-0b29-7ffb-9838-17ae0a248c4b
+2025-10-24 23:07:24 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5eee-7dd4-901b-e4cddee627b5
+2025-10-24 23:07:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6723-7dd4-901c-210110fe3316
+2025-10-24 23:07:24 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6766-7dd4-901c-296a5051e9db
+2025-10-24 23:07:25 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5f32-7dd4-901b-e8007f9d538a
+2025-10-24 23:07:26 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-664f-7dd4-901c-0916aeed02ec
+2025-10-24 23:07:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-68c3-7dd4-901c-4c69d7f3fc0b
+2025-10-24 23:07:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6903-7dd4-901c-51523ee52f58
+2025-10-24 23:07:26 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6940-7dd4-901c-5df2329fc43b
+2025-10-24 23:07:30 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6686-7dd4-901c-17c436309844
+2025-10-24 23:07:30 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-69dc-7dd4-901c-6f066378a5b5
+2025-10-24 23:07:30 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a18-7dd4-901c-720ceda3bd66
+2025-10-24 23:07:30 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a59-7dd4-901c-7c09fe069b6c
+2025-10-24 23:07:30 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a92-7dd4-901c-80162b7f667f
+2025-10-24 23:07:30 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-66d9-7dd4-901c-1bda3a511453
+2025-10-24 23:07:31 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ae-7dd4-901c-307470c9b008
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6b94-7dd4-901c-a1c93d1603eb
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6bed-7dd4-901c-aca8aeabc18d
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c38-7dd4-901c-b0d58a99ceb9
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c8c-7dd4-901c-bbae67f910cb
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6cca-7dd4-901c-c1fc2f62e192
+2025-10-24 23:07:31 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ec-7dd4-901c-38ec2c2eac9f
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d4f-7dd4-901c-d62483c74948
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d8e-7dd4-901c-df3b34b3501e
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6dd1-7dd4-901c-e75b4f510159
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e15-7dd4-901c-ee78dc3f8d84
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e4c-7dd4-901c-f7de12dfe35d
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e85-7dd4-901c-faead581deaf
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6ec5-7dd4-901d-007f28176f67
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f15-7dd4-901d-0c85f0faf7cb
+2025-10-24 23:07:31 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f60-7dd4-901d-100775eaaa45
+2025-10-24 23:07:32 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6985-7dd4-901c-66ba181ee4af
+2025-10-24 23:07:36 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6ad3-7dd4-901c-8dfbdd0c6c47
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-701c-7dd4-901d-28dd66e91c04
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7066-7dd4-901d-4590cd76a323
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70ac-7dd4-901d-4a82d696f032
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70e8-7dd4-901d-5126ae6930c1
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-712c-7dd4-901d-58d1af892de8
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-716c-7dd4-901d-67dd8561b99c
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-71b6-7dd4-901d-68650eae8b37
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7212-7dd4-901d-78c3dc0129c2
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-725c-7dd4-901d-8008894f2774
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72ac-7dd4-901d-8947a00ad175
+2025-10-24 23:07:36 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72e6-7dd4-901d-9288dceb3716
+2025-10-24 23:07:36 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6b1d-7dd4-901c-908ab9e73b41
+2025-10-24 23:07:37 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6d15-7dd4-901c-cd06652a0491
+2025-10-24 23:07:37 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6f9b-7dd4-901d-1b98b88803d0
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7407-7dd4-901d-bdfcf3ad7ffa
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7440-7dd4-901d-c2d40b1e4824
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7512-7dd4-901d-cbae0138b8bc
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7551-7dd4-901d-d63d1c1aa900
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-758b-7dd4-901d-df5b4f5d7209
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-75f3-7dd4-901d-e3ebf0f3850e
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7632-7dd4-901d-ed17c7932ba3
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7670-7dd4-901d-f5f4360ba1e0
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-76b6-7dd4-901e-02b81ae41d05
+2025-10-24 23:07:37 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7709-7dd4-901e-09ba405ca3fa
+2025-10-24 23:07:38 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6fda-7dd4-901d-231c845066af
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77a2-7dd4-901e-232992456d0b
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77f8-7dd4-901e-34fece5a9341
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7834-7dd4-901e-3e9146719c92
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-787c-7dd4-901e-49b6fcf313a5
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-78c2-7dd4-901e-5125653e6aee
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7905-7dd4-901e-5c863dfc09cf
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-794a-7dd4-901e-638409db53cc
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-798c-7dd4-901e-6d8bd2ee14ef
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-79cb-7dd4-901e-73cce549e20f
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ba8-7dd4-901e-8bce7674617f
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7bea-7dd4-901e-9744d199a2c2
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c28-7dd4-901e-9c7fd2cd7902
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c64-7dd4-901e-a6a7e579d318
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ca8-7dd4-901e-aba8f390cfe0
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7cea-7dd4-901e-b37e1cccc77c
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d29-7dd4-901e-bf3cd9690978
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d7a-7dd4-901e-c1aef7f6ef2a
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7db4-7dd4-901e-cd6a6a2b3235
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7dee-7dd4-901e-d054e2d95def
+2025-10-24 23:07:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7e29-7dd4-901e-ded921f901c0
+2025-10-24 23:07:42 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7321-7dd4-901d-9ec6f2d06357
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7eaa-7dd4-901e-ebf190e89bbf
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ee5-7dd4-901e-f54206d91148
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f24-7dd4-901e-fc322f087a10
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f69-7dd4-901f-07b9eb814603
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7faf-7dd4-901f-0fc15317bd0c
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ff6-7dd4-901f-1a3f92b002ad
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8035-7dd4-901f-229fe3e8fa0b
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8079-7dd4-901f-36c25a044561
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80b6-7dd4-901f-3bb0997c4ece
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80f4-7dd4-901f-40e899cb7c8e
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-815b-7dd4-901f-53b779c47a24
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ae-7dd4-901f-5b48b65ad009
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ed-7dd4-901f-6f5eb05736d0
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8224-7dd4-901f-70127a00797f
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-825f-7dd4-901f-7b92a3ede5a4
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8296-7dd4-901f-8437719e22dc
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-82cc-7dd4-901f-8ad85ce99d39
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8308-7dd4-901f-91665dc5c84e
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-834b-7dd4-901f-9ff4aca9cfa0
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8382-7dd4-901f-a332dbbd2076
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83bb-7dd4-901f-ad7004a31157
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83f3-7dd4-901f-b1f411dbe660
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8441-7dd4-901f-bd26fdaa2733
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8484-7dd4-901f-c1b8eb4dad20
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-877c-7dd4-901f-ce3b830e697b
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87b7-7dd4-901f-d4c0aef084ee
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87f2-7dd4-901f-d915c2b0e5f7
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-882c-7dd4-901f-ec1a0fff38e1
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8867-7dd4-901f-f59bdc31b233
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88a1-7dd4-901f-f83f2040de8f
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88d8-7dd4-9020-02ea67bd0c95
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8910-7dd4-9020-0aa5297454e2
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-894e-7dd4-9020-15b1f9adfac7
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-898b-7dd4-9020-23db76f81ad9
+2025-10-24 23:07:42 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-736a-7dd4-901d-a27b7954dc7b
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a11-7dd4-9020-326cb17babf5
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a49-7dd4-9020-3f318bda9f7e
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b12-7dd4-9020-447ebc9072d2
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b4d-7dd4-9020-49c54542e21e
+2025-10-24 23:07:42 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b82-7dd4-9020-557b438c1911
+2025-10-24 23:07:43 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-73ce-7dd4-901d-b449ecd71baa
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c33-7dd4-9020-60b9f71cebaf
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c6a-7dd4-9020-6810baa5a4fa
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ca5-7dd4-9020-740a9dc892e5
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ce7-7dd4-9020-7fdaf89e027d
+2025-10-24 23:07:43 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7766-7dd4-901e-1a6348be09ab
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8d8d-7dd4-9020-90b89890780c
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8dd4-7dd4-9020-9b09c152c4fd
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e0c-7dd4-9020-a2e9eefd1c5f
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e4a-7dd4-9020-a95e142bdd8a
+2025-10-24 23:07:43 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ffd-7dd4-9020-b9f67c99d97c
+2025-10-24 23:07:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7e64-7dd4-901e-e1b7ff720083
+2025-10-24 23:07:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-90eb-7dd4-9020-cc649bdee709
+2025-10-24 23:07:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9125-7dd4-9020-d021d2491132
+2025-10-24 23:07:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-89d9-7dd4-9020-2934c69160bf
+2025-10-24 23:07:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8bf2-7dd4-9020-5db8171c0e3d
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-91f2-7dd4-9020-f167db279bb0
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9235-7dd4-9020-fdad42da97d1
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-927d-7dd4-9021-0c6d071f8d4f
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92b8-7dd4-9021-13f88a4358c8
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92ee-7dd4-9021-1d4071f6c41b
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9321-7dd4-9021-25bac18c1620
+2025-10-24 23:07:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9357-7dd4-9021-2c6fb97fd9b3
+2025-10-24 23:07:48 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8d2e-7dd4-9020-83cb7f71f979
+2025-10-24 23:07:48 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-9090-7dd4-9020-c63b580cc718
+2025-10-24 23:07:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-916e-7dd4-9020-e1c763499314
+2025-10-24 23:07:50 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-91af-7dd4-9020-eaee1e963e17
+2025-10-24 23:07:50 [SUCCESS] upload_audio — ✅ Upload complete — 65 succeeded, 194 failed
+2025-10-24 23:07:50 [WARNING] upload_audio — ⚠️  Saved 194 failed uploads to failed_uploads.csv
+2025-10-24 23:07:50 [SUCCESS] __main__ — SUCCESS: Uploaded all recordings in parallel.
+2025-10-24 23:07:50 [SUCCESS] __main__ — SUCCESS: Saved DataFrame to calls_with_recordings.csv
+2025-10-24 23:07:50 [INFO] __main__ — ✅ ETL complete. Saved to calls_with_recordings.csv
+2025-10-24 23:07:50 [INFO] __main__ — ⬆️ Loading transformed data to Supabase...
+2025-10-24 23:07:50 [INFO] load — 🔍 Validating DataFrame schema before load...
+2025-10-24 23:07:50 [SUCCESS] load — ✅ All required columns present.
+2025-10-24 23:07:50 [WARNING] load — ⚠️ Extra columns found (not in expected schema): ['assistant_id', 'org_id', 'campaign_id', 'ended_reason', 'created_at', 'started_at', 'ended_at', 'updated_at', 'stereo_recording_url']
+2025-10-24 23:07:50 [SUCCESS] load — ✅ Schema validation passed.
+2025-10-24 23:07:50 [INFO] load — 🚀 Starting upsert of 259 records into table 'ai_calls'...
+2025-10-24 23:07:50 [INFO] load — 🔹 Processing batch 1 (259 rows)...
+2025-10-24 23:07:50 [ERROR] load — ❌ Load to Supabase failed after 0 successes: Out of range float values are not JSON compliant: nan
+2025-10-24 23:07:50 [WARNING] __main__ — ⚠️ Load completed with 259 failed records.
+2025-10-24 23:07:50 [INFO] utils.summary_utils — 
+══════════════════════════════════════════════════════════════════════
+2025-10-24 23:07:50 [INFO] utils.summary_utils — 📊 ETL PIPELINE SUMMARY
+2025-10-24 23:07:50 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 23:07:50 [SUCCESS] utils.summary_utils — 🟢 Extracted   : 259 records
+2025-10-24 23:07:50 [SUCCESS] utils.summary_utils — 🧩 Transformed : 259 records
+2025-10-24 23:07:50 [SUCCESS] utils.summary_utils — ☁️  Uploaded    : 65 succeeded, 194 failed
+2025-10-24 23:07:50 [SUCCESS] utils.summary_utils — 💾 Loaded      : 0 succeeded, 259 failed
+2025-10-24 23:07:50 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 23:07:50 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
+
+2025-10-24 23:13:23 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 23:13:23 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 23:13:23 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 23:13:23 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 23:13:24 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 23:13:24 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 23:13:24 [INFO] __main__ — Fetching calls from VAPI v2...
+2025-10-24 23:13:24 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 23:13:26 [INFO] extract — [Page 1] Retrieved 259 calls.
+2025-10-24 23:13:26 [INFO] extract — ✅ Extraction complete — total 259 calls fetched.
+2025-10-24 23:13:26 [SUCCESS] extract — SUCCESS: Extracted 259 calls from VAPI API.
+2025-10-24 23:13:26 [SUCCESS] __main__ — SUCCESS: Extracted 259 calls from VAPI.
+2025-10-24 23:13:26 [INFO] __main__ — Total calls fetched: 259
+2025-10-24 23:13:26 [INFO] __main__ — Transforming calls...
+2025-10-24 23:13:26 [INFO] transform — Transforming 259 raw call records...
+2025-10-24 23:13:27 [INFO] transform — ✅ Transform complete — 259 rows created.
+2025-10-24 23:13:27 [SUCCESS] transform — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 23:13:27 [SUCCESS] __main__ — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 23:13:27 [INFO] __main__ — Uploading recordings in parallel...
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1dcb-700b-bb30-b722136062e4
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1f15-700b-bb30-c69134021952
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-203f-700b-bb30-c838c7a1c80e
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2149-700b-bb30-d7e83f4c7e28
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-22a5-700b-bb30-d8f35e911886
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-23b8-700b-bb30-e8579889e561
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-24d2-700b-bb30-f0d725a535c7
+2025-10-24 23:13:27 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-288e-700b-bb30-fcae95322d06
+2025-10-24 23:13:34 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a07-700b-bb31-0e4b89c3b721
+2025-10-24 23:13:34 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-29be-700b-bb31-05ab6f9866d5
+2025-10-24 23:13:34 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2adf-700b-bb31-272a2be7139c
+2025-10-24 23:13:34 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b22-700b-bb31-289ad328203d
+2025-10-24 23:13:34 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b61-700b-bb31-3641caed71d6
+2025-10-24 23:13:34 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2e73-700b-bb31-39e9f3720cc2
+2025-10-24 23:13:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2ebb-700b-bb31-4426f336ae5b
+2025-10-24 23:13:35 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1b3a-700b-bb30-9c30e437f1f7
+2025-10-24 23:13:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f40-700b-bb31-56e451855dfa
+2025-10-24 23:13:35 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f7e-700b-bb31-5b210d2be971
+2025-10-24 23:13:35 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a54-700b-bb31-138ce76421a5
+2025-10-24 23:13:35 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1c7a-700b-bb30-aab34eca7301
+2025-10-24 23:13:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a98-700b-bb31-1d0cc18fdece
+2025-10-24 23:13:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2fc5-700b-bb31-653f69003ea5
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-30df-700b-bb31-8244912411c1
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3134-700b-bb31-8c5c3de4a5c7
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3178-700b-bb31-94c2b56e0cf1
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31b8-700b-bb31-9aa269c4a13d
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31fa-700b-bb31-a7e818d196fd
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-323a-700b-bb31-a812ba6f0527
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3281-700b-bb31-b2d34a16ea9f
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-32c3-700b-bb31-b8ca764c4ceb
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-330f-700b-bb31-c54681589133
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-335a-700b-bb31-ca28d45e5a94
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33a6-700b-bb31-d143d0f6893a
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33fa-700b-bb31-d99abd6ed8b7
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-343e-700b-bb31-e2316d6fed69
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3484-700b-bb31-eae72c39b95d
+2025-10-24 23:13:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3017-700b-bb31-68b3dd8412ac
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3518-700b-bb31-fc99cc0f52c6
+2025-10-24 23:13:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-305a-700b-bb31-75d5f14d7e8d
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35b1-700b-bb32-08eb659d87fd
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35f2-700b-bb32-11647e3a19b5
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3643-700b-bb32-1bf5f01b89ec
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-368f-700b-bb32-238ea56c9dd7
+2025-10-24 23:13:41 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-36e0-700b-bb32-29210275a4f3
+2025-10-24 23:13:41 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2efa-700b-bb31-4896c16ce484
+2025-10-24 23:13:46 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3099-700b-bb31-7aeeccf6092a
+2025-10-24 23:13:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-34d2-700b-bb31-f28d67388b1b
+2025-10-24 23:13:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3562-700b-bb32-01d8d8bb9aaa
+2025-10-24 23:13:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-386e-700b-bb32-5532fc4ea003
+2025-10-24 23:13:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38b2-700b-bb32-5843a404282b
+2025-10-24 23:13:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38f6-700b-bb32-61ed7e32a632
+2025-10-24 23:13:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3760-700b-bb32-30d17433ae86
+2025-10-24 23:13:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3975-700b-bb32-72543a9dbbbe
+2025-10-24 23:13:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-39bc-700b-bb32-7e53cfbe5ef2
+2025-10-24 23:13:47 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3e13-700b-bb32-875a6b9cdee1
+2025-10-24 23:13:47 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37a0-700b-bb32-3d588ab71dc7
+2025-10-24 23:13:51 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37e8-700b-bb32-427eb6f73cf5
+2025-10-24 23:13:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3ee8-700b-bb32-9ee7f36233b6
+2025-10-24 23:13:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f2e-700b-bb32-a5528bfef6a2
+2025-10-24 23:13:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f96-700b-bb32-ab4cec67c406
+2025-10-24 23:13:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-4f38-700b-bb32-b0fc570b72a7
+2025-10-24 23:13:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5108-700b-bb32-c1115550cc4e
+2025-10-24 23:13:52 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3831-700b-bb32-4dd841fadab4
+2025-10-24 23:13:52 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3936-700b-bb32-69eeb99fcc88
+2025-10-24 23:13:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3e60-700b-bb32-8e402d881ea4
+2025-10-24 23:13:53 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3ea6-700b-bb32-966c4bcbbd05
+2025-10-24 23:13:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-53f6-700b-bb32-f381cbdde096
+2025-10-24 23:13:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-543a-700b-bb32-fa9adabb9db2
+2025-10-24 23:13:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5490-700b-bb33-079d80ad21ed
+2025-10-24 23:13:53 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-54d1-700b-bb33-0e68dab9ad68
+2025-10-24 23:13:56 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-51a0-700b-bb32-c89762d5b183
+2025-10-24 23:13:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5568-700b-bb33-19fca30525f2
+2025-10-24 23:13:58 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5213-700b-bb32-d5bdcb7bfa54
+2025-10-24 23:13:58 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5307-700b-bb32-e52448d01abf
+2025-10-24 23:13:58 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-53a9-700b-bb32-ef4c1a671788
+2025-10-24 23:13:58 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-56b6-700b-bb33-3b1311884889
+2025-10-24 23:13:58 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-551a-700b-bb33-137d3846264a
+2025-10-24 23:13:58 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5740-700b-bb33-498beb4ba7c4
+2025-10-24 23:13:59 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55b2-700b-bb33-24a42bde0984
+2025-10-24 23:13:59 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-57d5-700b-bb33-592048bb88e3
+2025-10-24 23:13:59 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-581e-700b-bb33-630f36384a03
+2025-10-24 23:14:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55f8-700b-bb33-2b1c413d1401
+2025-10-24 23:14:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-58c0-700b-bb33-7b74ebf8a8dd
+2025-10-24 23:14:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5651-700b-bb33-32d9cf690002
+2025-10-24 23:14:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-59ed-700b-bb33-9ffdbbcdb530
+2025-10-24 23:14:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5a3e-700b-bb33-a0ebc26d93f6
+2025-10-24 23:14:01 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-578a-700b-bb33-5031b6c745d2
+2025-10-24 23:14:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5ad4-700b-bb33-b293400b18c4
+2025-10-24 23:14:01 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-56f4-700b-bb33-46152ba8b00a
+2025-10-24 23:14:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5b6e-700b-bb33-c6e649547fa0
+2025-10-24 23:14:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5bbd-700b-bb33-cfd981c0c472
+2025-10-24 23:14:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5c0a-700b-bb33-d14223e69bf7
+2025-10-24 23:14:01 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-586d-700b-bb33-6e03614a4797
+2025-10-24 23:14:02 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-590f-700b-bb33-8110f6eb4e53
+2025-10-24 23:14:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-60ca-700b-bb34-3f9605dde4bd
+2025-10-24 23:14:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6214-700b-bb34-5e9402e1018a
+2025-10-24 23:14:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-63cb-700b-bb34-8bc06b2475b1
+2025-10-24 23:14:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6583-700b-bb34-b7befe401f1f
+2025-10-24 23:14:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6867-700b-bb34-f8058a151202
+2025-10-24 23:14:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-69e0-700b-bb35-1afeee533c02
+2025-10-24 23:14:03 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5a88-700b-bb33-abcaaa57eb53
+2025-10-24 23:14:03 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6c56-700b-bb35-5a9c294503a5
+2025-10-24 23:14:03 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5c67-700b-bb33-dca08e8cb292
+2025-10-24 23:14:03 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6d75-700b-bb35-7a25d642847f
+2025-10-24 23:14:03 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5b19-700b-bb33-ba75c98b8b47
+2025-10-24 23:14:04 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5cba-700b-bb33-e510d159eb4b
+2025-10-24 23:14:04 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-585b-7dd4-901b-c3d4c11b3103
+2025-10-24 23:14:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6bbb-700b-bb35-4dc680ba3d7e
+2025-10-24 23:14:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-5913-7dd4-901b-d955129e2d67
+2025-10-24 23:14:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1267-770b-7ffb-981e-8e40ae2d9ea1
+2025-10-24 23:14:05 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1289-0b29-7ffb-9838-17ae0a248c4b
+2025-10-24 23:14:05 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-65a4-7dd4-901b-ff1a26e7cdb5
+2025-10-24 23:14:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6c9c-700b-bb35-666489f41faf
+2025-10-24 23:14:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-58c5-7dd4-901b-d7b1ae80dee3
+2025-10-24 23:14:07 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5eee-7dd4-901b-e4cddee627b5
+2025-10-24 23:14:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6723-7dd4-901c-210110fe3316
+2025-10-24 23:14:07 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6766-7dd4-901c-296a5051e9db
+2025-10-24 23:14:08 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-664f-7dd4-901c-0916aeed02ec
+2025-10-24 23:14:08 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5f32-7dd4-901b-e8007f9d538a
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-68c3-7dd4-901c-4c69d7f3fc0b
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6903-7dd4-901c-51523ee52f58
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6940-7dd4-901c-5df2329fc43b
+2025-10-24 23:14:08 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6686-7dd4-901c-17c436309844
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-69dc-7dd4-901c-6f066378a5b5
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a18-7dd4-901c-720ceda3bd66
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a59-7dd4-901c-7c09fe069b6c
+2025-10-24 23:14:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a92-7dd4-901c-80162b7f667f
+2025-10-24 23:14:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-66d9-7dd4-901c-1bda3a511453
+2025-10-24 23:14:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ae-7dd4-901c-307470c9b008
+2025-10-24 23:14:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6b94-7dd4-901c-a1c93d1603eb
+2025-10-24 23:14:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6bed-7dd4-901c-aca8aeabc18d
+2025-10-24 23:14:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c38-7dd4-901c-b0d58a99ceb9
+2025-10-24 23:14:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c8c-7dd4-901c-bbae67f910cb
+2025-10-24 23:14:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6cca-7dd4-901c-c1fc2f62e192
+2025-10-24 23:14:10 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ec-7dd4-901c-38ec2c2eac9f
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d4f-7dd4-901c-d62483c74948
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d8e-7dd4-901c-df3b34b3501e
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6dd1-7dd4-901c-e75b4f510159
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e15-7dd4-901c-ee78dc3f8d84
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e4c-7dd4-901c-f7de12dfe35d
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e85-7dd4-901c-faead581deaf
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6ec5-7dd4-901d-007f28176f67
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f15-7dd4-901d-0c85f0faf7cb
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f60-7dd4-901d-100775eaaa45
+2025-10-24 23:14:10 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6985-7dd4-901c-66ba181ee4af
+2025-10-24 23:14:10 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6ad3-7dd4-901c-8dfbdd0c6c47
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-701c-7dd4-901d-28dd66e91c04
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7066-7dd4-901d-4590cd76a323
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70ac-7dd4-901d-4a82d696f032
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70e8-7dd4-901d-5126ae6930c1
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-712c-7dd4-901d-58d1af892de8
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-716c-7dd4-901d-67dd8561b99c
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-71b6-7dd4-901d-68650eae8b37
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7212-7dd4-901d-78c3dc0129c2
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-725c-7dd4-901d-8008894f2774
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72ac-7dd4-901d-8947a00ad175
+2025-10-24 23:14:10 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72e6-7dd4-901d-9288dceb3716
+2025-10-24 23:14:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6b1d-7dd4-901c-908ab9e73b41
+2025-10-24 23:14:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6d15-7dd4-901c-cd06652a0491
+2025-10-24 23:14:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6f9b-7dd4-901d-1b98b88803d0
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7407-7dd4-901d-bdfcf3ad7ffa
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7440-7dd4-901d-c2d40b1e4824
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7512-7dd4-901d-cbae0138b8bc
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7551-7dd4-901d-d63d1c1aa900
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-758b-7dd4-901d-df5b4f5d7209
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-75f3-7dd4-901d-e3ebf0f3850e
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7632-7dd4-901d-ed17c7932ba3
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7670-7dd4-901d-f5f4360ba1e0
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-76b6-7dd4-901e-02b81ae41d05
+2025-10-24 23:14:12 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7709-7dd4-901e-09ba405ca3fa
+2025-10-24 23:14:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6fda-7dd4-901d-231c845066af
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77a2-7dd4-901e-232992456d0b
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77f8-7dd4-901e-34fece5a9341
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7834-7dd4-901e-3e9146719c92
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-787c-7dd4-901e-49b6fcf313a5
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-78c2-7dd4-901e-5125653e6aee
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7905-7dd4-901e-5c863dfc09cf
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-794a-7dd4-901e-638409db53cc
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-798c-7dd4-901e-6d8bd2ee14ef
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-79cb-7dd4-901e-73cce549e20f
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ba8-7dd4-901e-8bce7674617f
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7bea-7dd4-901e-9744d199a2c2
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c28-7dd4-901e-9c7fd2cd7902
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c64-7dd4-901e-a6a7e579d318
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ca8-7dd4-901e-aba8f390cfe0
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7cea-7dd4-901e-b37e1cccc77c
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d29-7dd4-901e-bf3cd9690978
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d7a-7dd4-901e-c1aef7f6ef2a
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7db4-7dd4-901e-cd6a6a2b3235
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7dee-7dd4-901e-d054e2d95def
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7e29-7dd4-901e-ded921f901c0
+2025-10-24 23:14:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7321-7dd4-901d-9ec6f2d06357
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7eaa-7dd4-901e-ebf190e89bbf
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ee5-7dd4-901e-f54206d91148
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f24-7dd4-901e-fc322f087a10
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f69-7dd4-901f-07b9eb814603
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7faf-7dd4-901f-0fc15317bd0c
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ff6-7dd4-901f-1a3f92b002ad
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8035-7dd4-901f-229fe3e8fa0b
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8079-7dd4-901f-36c25a044561
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80b6-7dd4-901f-3bb0997c4ece
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80f4-7dd4-901f-40e899cb7c8e
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-815b-7dd4-901f-53b779c47a24
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ae-7dd4-901f-5b48b65ad009
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ed-7dd4-901f-6f5eb05736d0
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8224-7dd4-901f-70127a00797f
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-825f-7dd4-901f-7b92a3ede5a4
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8296-7dd4-901f-8437719e22dc
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-82cc-7dd4-901f-8ad85ce99d39
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8308-7dd4-901f-91665dc5c84e
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-834b-7dd4-901f-9ff4aca9cfa0
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8382-7dd4-901f-a332dbbd2076
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83bb-7dd4-901f-ad7004a31157
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83f3-7dd4-901f-b1f411dbe660
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8441-7dd4-901f-bd26fdaa2733
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8484-7dd4-901f-c1b8eb4dad20
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-877c-7dd4-901f-ce3b830e697b
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87b7-7dd4-901f-d4c0aef084ee
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87f2-7dd4-901f-d915c2b0e5f7
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-882c-7dd4-901f-ec1a0fff38e1
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8867-7dd4-901f-f59bdc31b233
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88a1-7dd4-901f-f83f2040de8f
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88d8-7dd4-9020-02ea67bd0c95
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8910-7dd4-9020-0aa5297454e2
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-894e-7dd4-9020-15b1f9adfac7
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-898b-7dd4-9020-23db76f81ad9
+2025-10-24 23:14:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-736a-7dd4-901d-a27b7954dc7b
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a11-7dd4-9020-326cb17babf5
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a49-7dd4-9020-3f318bda9f7e
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b12-7dd4-9020-447ebc9072d2
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b4d-7dd4-9020-49c54542e21e
+2025-10-24 23:14:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b82-7dd4-9020-557b438c1911
+2025-10-24 23:14:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-73ce-7dd4-901d-b449ecd71baa
+2025-10-24 23:14:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c33-7dd4-9020-60b9f71cebaf
+2025-10-24 23:14:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c6a-7dd4-9020-6810baa5a4fa
+2025-10-24 23:14:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ca5-7dd4-9020-740a9dc892e5
+2025-10-24 23:14:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ce7-7dd4-9020-7fdaf89e027d
+2025-10-24 23:14:15 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7766-7dd4-901e-1a6348be09ab
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8d8d-7dd4-9020-90b89890780c
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8dd4-7dd4-9020-9b09c152c4fd
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e0c-7dd4-9020-a2e9eefd1c5f
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e4a-7dd4-9020-a95e142bdd8a
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ffd-7dd4-9020-b9f67c99d97c
+2025-10-24 23:14:15 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-89d9-7dd4-9020-2934c69160bf
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-90eb-7dd4-9020-cc649bdee709
+2025-10-24 23:14:15 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9125-7dd4-9020-d021d2491132
+2025-10-24 23:14:15 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8bf2-7dd4-9020-5db8171c0e3d
+2025-10-24 23:14:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7e64-7dd4-901e-e1b7ff720083
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-91f2-7dd4-9020-f167db279bb0
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9235-7dd4-9020-fdad42da97d1
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-927d-7dd4-9021-0c6d071f8d4f
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92b8-7dd4-9021-13f88a4358c8
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92ee-7dd4-9021-1d4071f6c41b
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9321-7dd4-9021-25bac18c1620
+2025-10-24 23:14:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9357-7dd4-9021-2c6fb97fd9b3
+2025-10-24 23:14:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8d2e-7dd4-9020-83cb7f71f979
+2025-10-24 23:14:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-9090-7dd4-9020-c63b580cc718
+2025-10-24 23:14:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-91af-7dd4-9020-eaee1e963e17
+2025-10-24 23:14:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-916e-7dd4-9020-e1c763499314
+2025-10-24 23:14:18 [SUCCESS] upload_audio — ✅ Upload complete — 65 succeeded, 194 failed
+2025-10-24 23:14:18 [WARNING] upload_audio — ⚠️  Saved 194 failed uploads to failed_uploads.csv
+2025-10-24 23:14:18 [SUCCESS] __main__ — SUCCESS: Uploaded all recordings in parallel.
+2025-10-24 23:14:18 [SUCCESS] __main__ — SUCCESS: Saved DataFrame to calls_with_recordings.csv
+2025-10-24 23:14:18 [INFO] __main__ — ✅ ETL complete. Saved to calls_with_recordings.csv
+2025-10-24 23:14:18 [INFO] __main__ — ⬆️ Loading transformed data to Supabase...
+2025-10-24 23:14:18 [INFO] load — 🔍 Validating DataFrame schema before load...
+2025-10-24 23:14:18 [SUCCESS] load — ✅ All required columns present.
+2025-10-24 23:14:18 [INFO] load — 🧹 Cleaning DataFrame for JSON serialization...
+2025-10-24 23:14:18 [SUCCESS] load — ✅ Data cleaned successfully — ready for load.
+2025-10-24 23:14:18 [INFO] load — 🚀 Starting upsert of 259 records into 'ai_calls'...
+2025-10-24 23:14:18 [INFO] load — 🔹 Batch 1 (259 rows)...
+2025-10-24 23:14:20 [SUCCESS] load — ✅ Batch 1: 259 upserted.
+2025-10-24 23:14:20 [SUCCESS] load — 🎯 Load complete — 259 succeeded.
+2025-10-24 23:14:20 [SUCCESS] __main__ — ✅ Load finished successfully at 2025-10-25T06:14:18.358603+00:00
+2025-10-24 23:14:20 [INFO] utils.summary_utils — 
+══════════════════════════════════════════════════════════════════════
+2025-10-24 23:14:20 [INFO] utils.summary_utils — 📊 ETL PIPELINE SUMMARY
+2025-10-24 23:14:20 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 23:14:20 [SUCCESS] utils.summary_utils — 🟢 Extracted   : 259 records
+2025-10-24 23:14:20 [SUCCESS] utils.summary_utils — 🧩 Transformed : 259 records
+2025-10-24 23:14:20 [SUCCESS] utils.summary_utils — ☁️  Uploaded    : 65 succeeded, 194 failed
+2025-10-24 23:14:20 [SUCCESS] utils.summary_utils — 💾 Loaded      : 259 succeeded, 0 failed
+2025-10-24 23:14:20 [INFO] utils.summary_utils — 🕒 Audit Time  : 2025-10-25T06:14:18.358603+00:00
+2025-10-24 23:14:20 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 23:14:20 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
+
+2025-10-24 23:34:21 [INFO] extract — Logger initialized with rotating file + rich console output
+2025-10-24 23:34:22 [INFO] transform — Logger initialized with rotating file + rich console output
+2025-10-24 23:34:22 [INFO] upload_audio — Logger initialized with rotating file + rich console output
+2025-10-24 23:34:22 [INFO] load — Logger initialized with rotating file + rich console output
+2025-10-24 23:34:22 [INFO] utils.summary_utils — Logger initialized with rotating file + rich console output
+2025-10-24 23:34:22 [INFO] __main__ — Logger initialized with rotating file + rich console output
+2025-10-24 23:34:22 [INFO] __main__ — 🔹 Starting extraction from VAPI v2 API...
+2025-10-24 23:34:22 [INFO] extract — Starting extraction from VAPI...
+2025-10-24 23:34:25 [INFO] extract — [Page 1] Retrieved 259 calls.
+2025-10-24 23:34:25 [INFO] extract — ✅ Extraction complete — total 259 calls fetched.
+2025-10-24 23:34:25 [SUCCESS] extract — SUCCESS: Extracted 259 calls from VAPI API.
+2025-10-24 23:34:25 [SUCCESS] __main__ — ✅ Extracted 259 call records from VAPI.
+2025-10-24 23:34:25 [INFO] __main__ — 🔹 Transforming extracted call data...
+2025-10-24 23:34:25 [INFO] transform — Transforming 259 raw call records...
+2025-10-24 23:34:25 [INFO] transform — ✅ Transform complete — 259 rows created.
+2025-10-24 23:34:25 [SUCCESS] transform — SUCCESS: Transformed 259 calls to DataFrame.
+2025-10-24 23:34:25 [SUCCESS] __main__ — ✅ Transformed 259 records into DataFrame.
+2025-10-24 23:34:25 [INFO] __main__ — 🔹 Uploading recordings to Supabase Storage in parallel...
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1dcb-700b-bb30-b722136062e4
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-1f15-700b-bb30-c69134021952
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-203f-700b-bb30-c838c7a1c80e
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2149-700b-bb30-d7e83f4c7e28
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-22a5-700b-bb30-d8f35e911886
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-23b8-700b-bb30-e8579889e561
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-24d2-700b-bb30-f0d725a535c7
+2025-10-24 23:34:25 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-288e-700b-bb30-fcae95322d06
+2025-10-24 23:34:32 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a07-700b-bb31-0e4b89c3b721
+2025-10-24 23:34:33 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1b3a-700b-bb30-9c30e437f1f7
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2adf-700b-bb31-272a2be7139c
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b22-700b-bb31-289ad328203d
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2b61-700b-bb31-3641caed71d6
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2e73-700b-bb31-39e9f3720cc2
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2ebb-700b-bb31-4426f336ae5b
+2025-10-24 23:34:33 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-29be-700b-bb31-05ab6f9866d5
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f40-700b-bb31-56e451855dfa
+2025-10-24 23:34:33 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-2f7e-700b-bb31-5b210d2be971
+2025-10-24 23:34:33 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a54-700b-bb31-138ce76421a5
+2025-10-24 23:34:33 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-1c7a-700b-bb30-aab34eca7301
+2025-10-24 23:34:38 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2a98-700b-bb31-1d0cc18fdece
+2025-10-24 23:34:38 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2efa-700b-bb31-4896c16ce484
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-30df-700b-bb31-8244912411c1
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3134-700b-bb31-8c5c3de4a5c7
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3178-700b-bb31-94c2b56e0cf1
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31b8-700b-bb31-9aa269c4a13d
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-31fa-700b-bb31-a7e818d196fd
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-323a-700b-bb31-a812ba6f0527
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3281-700b-bb31-b2d34a16ea9f
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-32c3-700b-bb31-b8ca764c4ceb
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-330f-700b-bb31-c54681589133
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-335a-700b-bb31-ca28d45e5a94
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33a6-700b-bb31-d143d0f6893a
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-33fa-700b-bb31-d99abd6ed8b7
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-343e-700b-bb31-e2316d6fed69
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3484-700b-bb31-eae72c39b95d
+2025-10-24 23:34:38 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-2fc5-700b-bb31-653f69003ea5
+2025-10-24 23:34:38 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3518-700b-bb31-fc99cc0f52c6
+2025-10-24 23:34:39 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-305a-700b-bb31-75d5f14d7e8d
+2025-10-24 23:34:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35b1-700b-bb32-08eb659d87fd
+2025-10-24 23:34:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-35f2-700b-bb32-11647e3a19b5
+2025-10-24 23:34:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3643-700b-bb32-1bf5f01b89ec
+2025-10-24 23:34:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-368f-700b-bb32-238ea56c9dd7
+2025-10-24 23:34:39 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-36e0-700b-bb32-29210275a4f3
+2025-10-24 23:34:39 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3017-700b-bb31-68b3dd8412ac
+2025-10-24 23:34:43 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3099-700b-bb31-7aeeccf6092a
+2025-10-24 23:34:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3562-700b-bb32-01d8d8bb9aaa
+2025-10-24 23:34:44 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-34d2-700b-bb31-f28d67388b1b
+2025-10-24 23:34:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-386e-700b-bb32-5532fc4ea003
+2025-10-24 23:34:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38b2-700b-bb32-5843a404282b
+2025-10-24 23:34:44 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-38f6-700b-bb32-61ed7e32a632
+2025-10-24 23:34:45 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3760-700b-bb32-30d17433ae86
+2025-10-24 23:34:45 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3975-700b-bb32-72543a9dbbbe
+2025-10-24 23:34:45 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-39bc-700b-bb32-7e53cfbe5ef2
+2025-10-24 23:34:45 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3e13-700b-bb32-875a6b9cdee1
+2025-10-24 23:34:45 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37a0-700b-bb32-3d588ab71dc7
+2025-10-24 23:34:48 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-37e8-700b-bb32-427eb6f73cf5
+2025-10-24 23:34:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3ee8-700b-bb32-9ee7f36233b6
+2025-10-24 23:34:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f2e-700b-bb32-a5528bfef6a2
+2025-10-24 23:34:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-3f96-700b-bb32-ab4cec67c406
+2025-10-24 23:34:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-4f38-700b-bb32-b0fc570b72a7
+2025-10-24 23:34:49 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5108-700b-bb32-c1115550cc4e
+2025-10-24 23:34:49 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3831-700b-bb32-4dd841fadab4
+2025-10-24 23:34:50 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3936-700b-bb32-69eeb99fcc88
+2025-10-24 23:34:50 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3e60-700b-bb32-8e402d881ea4
+2025-10-24 23:34:51 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-3ea6-700b-bb32-966c4bcbbd05
+2025-10-24 23:34:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-53f6-700b-bb32-f381cbdde096
+2025-10-24 23:34:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-543a-700b-bb32-fa9adabb9db2
+2025-10-24 23:34:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5490-700b-bb33-079d80ad21ed
+2025-10-24 23:34:51 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-54d1-700b-bb33-0e68dab9ad68
+2025-10-24 23:34:54 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-51a0-700b-bb32-c89762d5b183
+2025-10-24 23:34:54 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5568-700b-bb33-19fca30525f2
+2025-10-24 23:34:55 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5213-700b-bb32-d5bdcb7bfa54
+2025-10-24 23:34:55 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5307-700b-bb32-e52448d01abf
+2025-10-24 23:34:56 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-53a9-700b-bb32-ef4c1a671788
+2025-10-24 23:34:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-56b6-700b-bb33-3b1311884889
+2025-10-24 23:34:56 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-551a-700b-bb33-137d3846264a
+2025-10-24 23:34:56 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5740-700b-bb33-498beb4ba7c4
+2025-10-24 23:35:00 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55b2-700b-bb33-24a42bde0984
+2025-10-24 23:35:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-57d5-700b-bb33-592048bb88e3
+2025-10-24 23:35:00 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-581e-700b-bb33-630f36384a03
+2025-10-24 23:35:01 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5651-700b-bb33-32d9cf690002
+2025-10-24 23:35:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-58c0-700b-bb33-7b74ebf8a8dd
+2025-10-24 23:35:01 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-55f8-700b-bb33-2b1c413d1401
+2025-10-24 23:35:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-59ed-700b-bb33-9ffdbbcdb530
+2025-10-24 23:35:01 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5a3e-700b-bb33-a0ebc26d93f6
+2025-10-24 23:35:02 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-56f4-700b-bb33-46152ba8b00a
+2025-10-24 23:35:02 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5ad4-700b-bb33-b293400b18c4
+2025-10-24 23:35:03 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-578a-700b-bb33-5031b6c745d2
+2025-10-24 23:35:03 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5b6e-700b-bb33-c6e649547fa0
+2025-10-24 23:35:03 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5bbd-700b-bb33-cfd981c0c472
+2025-10-24 23:35:03 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-5c0a-700b-bb33-d14223e69bf7
+2025-10-24 23:35:04 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-586d-700b-bb33-6e03614a4797
+2025-10-24 23:35:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-590f-700b-bb33-8110f6eb4e53
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-60ca-700b-bb34-3f9605dde4bd
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6214-700b-bb34-5e9402e1018a
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-63cb-700b-bb34-8bc06b2475b1
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6583-700b-bb34-b7befe401f1f
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6867-700b-bb34-f8058a151202
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-69e0-700b-bb35-1afeee533c02
+2025-10-24 23:35:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5a88-700b-bb33-abcaaa57eb53
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6c56-700b-bb35-5a9c294503a5
+2025-10-24 23:35:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5b19-700b-bb33-ba75c98b8b47
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1250-6d75-700b-bb35-7a25d642847f
+2025-10-24 23:35:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5c67-700b-bb33-dca08e8cb292
+2025-10-24 23:35:06 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-5cba-700b-bb33-e510d159eb4b
+2025-10-24 23:35:06 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-585b-7dd4-901b-c3d4c11b3103
+2025-10-24 23:35:08 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6bbb-700b-bb35-4dc680ba3d7e
+2025-10-24 23:35:08 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1250-6c9c-700b-bb35-666489f41faf
+2025-10-24 23:35:08 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-5913-7dd4-901b-d955129e2d67
+2025-10-24 23:35:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1267-770b-7ffb-981e-8e40ae2d9ea1
+2025-10-24 23:35:09 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-65a4-7dd4-901b-ff1a26e7cdb5
+2025-10-24 23:35:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1289-0b29-7ffb-9838-17ae0a248c4b
+2025-10-24 23:35:09 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-58c5-7dd4-901b-d7b1ae80dee3
+2025-10-24 23:35:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-664f-7dd4-901c-0916aeed02ec
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6723-7dd4-901c-210110fe3316
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6766-7dd4-901c-296a5051e9db
+2025-10-24 23:35:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5f32-7dd4-901b-e8007f9d538a
+2025-10-24 23:35:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-5eee-7dd4-901b-e4cddee627b5
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-68c3-7dd4-901c-4c69d7f3fc0b
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6903-7dd4-901c-51523ee52f58
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6940-7dd4-901c-5df2329fc43b
+2025-10-24 23:35:11 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6686-7dd4-901c-17c436309844
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-69dc-7dd4-901c-6f066378a5b5
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a18-7dd4-901c-720ceda3bd66
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a59-7dd4-901c-7c09fe069b6c
+2025-10-24 23:35:11 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6a92-7dd4-901c-80162b7f667f
+2025-10-24 23:35:12 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-66d9-7dd4-901c-1bda3a511453
+2025-10-24 23:35:13 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ae-7dd4-901c-307470c9b008
+2025-10-24 23:35:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6b94-7dd4-901c-a1c93d1603eb
+2025-10-24 23:35:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6bed-7dd4-901c-aca8aeabc18d
+2025-10-24 23:35:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c38-7dd4-901c-b0d58a99ceb9
+2025-10-24 23:35:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6c8c-7dd4-901c-bbae67f910cb
+2025-10-24 23:35:13 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6cca-7dd4-901c-c1fc2f62e192
+2025-10-24 23:35:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-67ec-7dd4-901c-38ec2c2eac9f
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d4f-7dd4-901c-d62483c74948
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6d8e-7dd4-901c-df3b34b3501e
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6dd1-7dd4-901c-e75b4f510159
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e15-7dd4-901c-ee78dc3f8d84
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e4c-7dd4-901c-f7de12dfe35d
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6e85-7dd4-901c-faead581deaf
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6ec5-7dd4-901d-007f28176f67
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f15-7dd4-901d-0c85f0faf7cb
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-6f60-7dd4-901d-100775eaaa45
+2025-10-24 23:35:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6ad3-7dd4-901c-8dfbdd0c6c47
+2025-10-24 23:35:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6b1d-7dd4-901c-908ab9e73b41
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-701c-7dd4-901d-28dd66e91c04
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7066-7dd4-901d-4590cd76a323
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70ac-7dd4-901d-4a82d696f032
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-70e8-7dd4-901d-5126ae6930c1
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-712c-7dd4-901d-58d1af892de8
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-716c-7dd4-901d-67dd8561b99c
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-71b6-7dd4-901d-68650eae8b37
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7212-7dd4-901d-78c3dc0129c2
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-725c-7dd4-901d-8008894f2774
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72ac-7dd4-901d-8947a00ad175
+2025-10-24 23:35:14 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-72e6-7dd4-901d-9288dceb3716
+2025-10-24 23:35:14 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6985-7dd4-901c-66ba181ee4af
+2025-10-24 23:35:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6d15-7dd4-901c-cd06652a0491
+2025-10-24 23:35:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6f9b-7dd4-901d-1b98b88803d0
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7407-7dd4-901d-bdfcf3ad7ffa
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7440-7dd4-901d-c2d40b1e4824
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7512-7dd4-901d-cbae0138b8bc
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7551-7dd4-901d-d63d1c1aa900
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-758b-7dd4-901d-df5b4f5d7209
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-75f3-7dd4-901d-e3ebf0f3850e
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7632-7dd4-901d-ed17c7932ba3
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7670-7dd4-901d-f5f4360ba1e0
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-76b6-7dd4-901e-02b81ae41d05
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7709-7dd4-901e-09ba405ca3fa
+2025-10-24 23:35:16 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-6fda-7dd4-901d-231c845066af
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77a2-7dd4-901e-232992456d0b
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-77f8-7dd4-901e-34fece5a9341
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7834-7dd4-901e-3e9146719c92
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-787c-7dd4-901e-49b6fcf313a5
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-78c2-7dd4-901e-5125653e6aee
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7905-7dd4-901e-5c863dfc09cf
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-794a-7dd4-901e-638409db53cc
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-798c-7dd4-901e-6d8bd2ee14ef
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-79cb-7dd4-901e-73cce549e20f
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ba8-7dd4-901e-8bce7674617f
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7bea-7dd4-901e-9744d199a2c2
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c28-7dd4-901e-9c7fd2cd7902
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7c64-7dd4-901e-a6a7e579d318
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ca8-7dd4-901e-aba8f390cfe0
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7cea-7dd4-901e-b37e1cccc77c
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d29-7dd4-901e-bf3cd9690978
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7d7a-7dd4-901e-c1aef7f6ef2a
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7db4-7dd4-901e-cd6a6a2b3235
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7dee-7dd4-901e-d054e2d95def
+2025-10-24 23:35:16 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7e29-7dd4-901e-ded921f901c0
+2025-10-24 23:35:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-736a-7dd4-901d-a27b7954dc7b
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7eaa-7dd4-901e-ebf190e89bbf
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ee5-7dd4-901e-f54206d91148
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f24-7dd4-901e-fc322f087a10
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7f69-7dd4-901f-07b9eb814603
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7faf-7dd4-901f-0fc15317bd0c
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-7ff6-7dd4-901f-1a3f92b002ad
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8035-7dd4-901f-229fe3e8fa0b
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8079-7dd4-901f-36c25a044561
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80b6-7dd4-901f-3bb0997c4ece
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-80f4-7dd4-901f-40e899cb7c8e
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-815b-7dd4-901f-53b779c47a24
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ae-7dd4-901f-5b48b65ad009
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-81ed-7dd4-901f-6f5eb05736d0
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8224-7dd4-901f-70127a00797f
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-825f-7dd4-901f-7b92a3ede5a4
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8296-7dd4-901f-8437719e22dc
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-82cc-7dd4-901f-8ad85ce99d39
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8308-7dd4-901f-91665dc5c84e
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-834b-7dd4-901f-9ff4aca9cfa0
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8382-7dd4-901f-a332dbbd2076
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83bb-7dd4-901f-ad7004a31157
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-83f3-7dd4-901f-b1f411dbe660
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8441-7dd4-901f-bd26fdaa2733
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8484-7dd4-901f-c1b8eb4dad20
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-877c-7dd4-901f-ce3b830e697b
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87b7-7dd4-901f-d4c0aef084ee
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-87f2-7dd4-901f-d915c2b0e5f7
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-882c-7dd4-901f-ec1a0fff38e1
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8867-7dd4-901f-f59bdc31b233
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88a1-7dd4-901f-f83f2040de8f
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-88d8-7dd4-9020-02ea67bd0c95
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8910-7dd4-9020-0aa5297454e2
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-894e-7dd4-9020-15b1f9adfac7
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-898b-7dd4-9020-23db76f81ad9
+2025-10-24 23:35:17 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7321-7dd4-901d-9ec6f2d06357
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a11-7dd4-9020-326cb17babf5
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8a49-7dd4-9020-3f318bda9f7e
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b12-7dd4-9020-447ebc9072d2
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b4d-7dd4-9020-49c54542e21e
+2025-10-24 23:35:17 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8b82-7dd4-9020-557b438c1911
+2025-10-24 23:35:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-73ce-7dd4-901d-b449ecd71baa
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c33-7dd4-9020-60b9f71cebaf
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8c6a-7dd4-9020-6810baa5a4fa
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ca5-7dd4-9020-740a9dc892e5
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ce7-7dd4-9020-7fdaf89e027d
+2025-10-24 23:35:18 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7766-7dd4-901e-1a6348be09ab
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8d8d-7dd4-9020-90b89890780c
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8dd4-7dd4-9020-9b09c152c4fd
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e0c-7dd4-9020-a2e9eefd1c5f
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8e4a-7dd4-9020-a95e142bdd8a
+2025-10-24 23:35:18 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-8ffd-7dd4-9020-b9f67c99d97c
+2025-10-24 23:35:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-89d9-7dd4-9020-2934c69160bf
+2025-10-24 23:35:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-90eb-7dd4-9020-cc649bdee709
+2025-10-24 23:35:19 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9125-7dd4-9020-d021d2491132
+2025-10-24 23:35:19 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-7e64-7dd4-901e-e1b7ff720083
+2025-10-24 23:35:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8bf2-7dd4-9020-5db8171c0e3d
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-91f2-7dd4-9020-f167db279bb0
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9235-7dd4-9020-fdad42da97d1
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-927d-7dd4-9021-0c6d071f8d4f
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92b8-7dd4-9021-13f88a4358c8
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-92ee-7dd4-9021-1d4071f6c41b
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9321-7dd4-9021-25bac18c1620
+2025-10-24 23:35:20 [WARNING] upload_audio — [SKIP] No recording URL for call 019a1290-9357-7dd4-9021-2c6fb97fd9b3
+2025-10-24 23:35:20 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-8d2e-7dd4-9020-83cb7f71f979
+2025-10-24 23:35:21 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-9090-7dd4-9020-c63b580cc718
+2025-10-24 23:35:21 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-91af-7dd4-9020-eaee1e963e17
+2025-10-24 23:35:21 [SUCCESS] upload_audio — SUCCESS: Uploaded and signed 019a1290-916e-7dd4-9020-e1c763499314
+2025-10-24 23:35:21 [SUCCESS] upload_audio — ✅ Upload complete — 65 succeeded, 194 skipped, 0 failed
+2025-10-24 23:35:21 [SUCCESS] __main__ — ✅ Upload stage completed — 65 succeeded, 194 skipped, 0 failed.
+2025-10-24 23:35:21 [SUCCESS] __main__ — 📁 Saved intermediate dataset → calls_with_recordings.csv
+2025-10-24 23:35:21 [INFO] __main__ — 🔹 Loading transformed dataset into Supabase table...
+2025-10-24 23:35:21 [INFO] load — 🔍 Validating DataFrame schema before load...
+2025-10-24 23:35:21 [SUCCESS] load — ✅ All required columns present.
+2025-10-24 23:35:21 [INFO] load — 🧹 Cleaning DataFrame for JSON serialization...
+2025-10-24 23:35:21 [SUCCESS] load — ✅ Data cleaned successfully — ready for load.
+2025-10-24 23:35:21 [INFO] load — 🚀 Starting upsert of 259 records into 'ai_calls'...
+2025-10-24 23:35:21 [INFO] load — 🔹 Batch 1 (259 rows)...
+2025-10-24 23:35:24 [SUCCESS] load — ✅ Batch 1: 259 upserted.
+2025-10-24 23:35:24 [SUCCESS] load — 🎯 Load complete — 259 succeeded.
+2025-10-24 23:35:24 [SUCCESS] __main__ — ✅ Load completed successfully at 2025-10-25T06:35:21.931967+00:00.
+2025-10-24 23:35:24 [INFO] __main__ — 📊 Generating ETL summary report...
+2025-10-24 23:35:24 [INFO] utils.summary_utils — 
+══════════════════════════════════════════════════════════════════════
+2025-10-24 23:35:24 [INFO] utils.summary_utils — 📊 ETL PIPELINE SUMMARY
+2025-10-24 23:35:24 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 23:35:24 [SUCCESS] utils.summary_utils — 🟢 Extracted   : 259 records
+2025-10-24 23:35:24 [SUCCESS] utils.summary_utils — 🧩 Transformed : 259 records
+2025-10-24 23:35:24 [SUCCESS] utils.summary_utils — ☁️  Recordings Uploaded    : 65 succeeded, 194 skipped, 0 failed
+2025-10-24 23:35:24 [SUCCESS] utils.summary_utils — 💾 Loaded      : 259 succeeded, 0 failed
+2025-10-24 23:35:24 [INFO] utils.summary_utils — 🕒 Audit Time  : 2025-10-25T06:35:21.931967+00:00
+2025-10-24 23:35:24 [INFO] utils.summary_utils — ══════════════════════════════════════════════════════════════════════
+2025-10-24 23:35:24 [SUCCESS] utils.summary_utils — ✅ ETL run completed successfully!
+
+2025-10-24 23:35:24 [SUCCESS] __main__ — 🎉 ETL Pipeline completed successfully.

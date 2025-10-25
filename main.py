@@ -1,69 +1,121 @@
 # main.py
+"""
+Main ETL pipeline for VAPI → Supabase data flow.
+Steps:
+  1. Extract calls from VAPI API.
+  2. Transform them into structured DataFrame.
+  3. Upload stereo recordings in parallel to Supabase Storage.
+  4. Load final dataset (with signed URLs) into Supabase table.
+  5. Print a complete summary of the ETL process.
+
+Each stage is logged with success/failure stats.
+"""
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Imports
+# ──────────────────────────────────────────────────────────────────────────────
 from extract import extract_calls
 from transform import transform_calls
 from upload_audio import upload_recordings_parallel
-from utils.logger_utils import get_logger
-from config import USE_RICH_LOGGING
 from load import load_to_supabase
+from utils.logger_utils import get_logger
 from utils.summary_utils import print_etl_summary
+from config import USE_RICH_LOGGING
 
+# ──────────────────────────────────────────────────────────────────────────────
+# Logger setup
+# ──────────────────────────────────────────────────────────────────────────────
 logger = get_logger(__name__, use_rich=USE_RICH_LOGGING)
 
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Main ETL pipeline
+# ──────────────────────────────────────────────────────────────────────────────
 def main():
-    logger.info("Fetching calls from VAPI v2...")
-    calls = extract_calls()
+    # =========================================================================
+    # 1️⃣  Extract stage
+    # =========================================================================
+    logger.info("🔹 Starting extraction from VAPI v2 API...")
+    calls = extract_calls(updated_at_gt="2025-10-23T16:00:00Z")
     extract_count = len(calls)
+
     if not calls:
-        logger.warning("No calls found. Exiting.")
+        logger.warning("⚠️ No calls found in extraction window. Exiting ETL.")
         return
 
-    logger.success(f"SUCCESS: Extracted {len(calls)} calls from VAPI.")
-    logger.info(f"Total calls fetched: {len(calls)}")
+    logger.success(f"✅ Extracted {extract_count} call records from VAPI.")
 
-    logger.info("Transforming calls...")
+    # =========================================================================
+    # 2️⃣  Transform stage
+    # =========================================================================
+    logger.info("🔹 Transforming extracted call data...")
     df = transform_calls(calls)
     transform_count = len(df)
-    logger.success(f"SUCCESS: Transformed {len(df)} calls to DataFrame.")
+    logger.success(f"✅ Transformed {transform_count} records into DataFrame.")
 
-    logger.info("Uploading recordings in parallel...")
-    upload_map = upload_recordings_parallel(df)
-    logger.success(f"SUCCESS: Uploaded all recordings in parallel.")
+    # =========================================================================
+    # 3️⃣  Upload recordings to Supabase Storage
+    # =========================================================================
+    logger.info("🔹 Uploading recordings to Supabase Storage in parallel...")
+    upload_result = upload_recordings_parallel(df)
 
+    # Extract the structured output
+    upload_summary = upload_result.get("summary", {})
+    upload_map = upload_result.get("upload_map", {})
+
+    upload_success = upload_summary.get("success", 0)
+    upload_skipped = upload_summary.get("skipped", 0)
+    upload_failed = upload_summary.get("failed", 0)
+
+    logger.success(
+        f"✅ Upload stage completed — {upload_success} succeeded, "
+        f"{upload_skipped} skipped, {upload_failed} failed."
+    )
+
+    # Map signed URLs back to DataFrame
     df["signed_url"] = df["id"].map(lambda x: upload_map.get(x, {}).get("signed_url"))
     df["signed_url_expiry"] = df["id"].map(lambda x: upload_map.get(x, {}).get("signed_url_expiry"))
 
+    # Save intermediate result
     df.to_csv("calls_with_recordings.csv", index=False)
-    logger.success("SUCCESS: Saved DataFrame to calls_with_recordings.csv")
-    logger.info("✅ ETL complete. Saved to calls_with_recordings.csv")
+    logger.success("📁 Saved intermediate dataset → calls_with_recordings.csv")
 
-    logger.info("⬆️ Loading transformed data to Supabase...")
+    # =========================================================================
+    # 4️⃣  Load final dataset into Supabase table
+    # =========================================================================
+    logger.info("🔹 Loading transformed dataset into Supabase table...")
     load_result = load_to_supabase(df)
-
-    if load_result["failed"] == 0:
-        logger.success(f"✅ Load finished successfully at {load_result['audit_time']}")
-    else:
-        logger.warning(f"⚠️ Load completed with {load_result['failed']} failed records.")
-
-
-     # Extract metrics
-    upload_success = df["signed_url"].notna().sum() if "signed_url" in df else 0
-    upload_failed = transform_count - upload_success
 
     load_success = load_result.get("success", 0)
     load_failed = load_result.get("failed", 0)
     audit_time = load_result.get("audit_time")
 
-    # Print final summary
+    if load_failed == 0:
+        logger.success(f"✅ Load completed successfully at {audit_time}.")
+    else:
+        logger.warning(f"⚠️ Load completed with {load_failed} failed record(s).")
+
+    # =========================================================================
+    # 5️⃣  Final ETL Summary
+    # =========================================================================
+    logger.info("📊 Generating ETL summary report...")
+
     print_etl_summary(
         extract_count=extract_count,
         transform_count=transform_count,
         upload_success=upload_success,
+        upload_skipped=upload_skipped,
         upload_failed=upload_failed,
         load_success=load_success,
         load_failed=load_failed,
         audit_time=audit_time,
     )
 
+    logger.success("🎉 ETL Pipeline completed successfully.")
 
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Entry Point
+# ──────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     main()

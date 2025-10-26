@@ -31,7 +31,7 @@ def get_logger(name: str = None, use_rich: bool = True) -> logging.Logger:
     logger = logging.getLogger(name or __name__)
 
     if not logger.handlers:
-        logger.setLevel(logging.INFO)
+        logger.setLevel(logging.DEBUG)
 
         # ─────────────── FILE HANDLER (ROTATING, NO DELETION) ───────────────
         log_dir = os.path.dirname(LOG_FILE) or "."

@@ -59,9 +59,8 @@ def extract_transform_load_calls(updated_at_gt=None, updated_at_lt=None):
     transform_result = transform_calls(calls)
     df = transform_result["df"]
     num_existing = transform_result["num_existing"]
-    num_new_or_updated = transform_result["num_new_or_updated"]
     transform_count = transform_result.get("num_transformed", len(df))
-    logger.success(f"✅ Transformed {transform_count} records into DataFrame. {num_existing} already existed, {num_new_or_updated} new/updated.")
+    logger.success(f"✅ Transformed {transform_count} records into DataFrame. {num_existing} already existed.")
 
     # =========================================================================
     # 3️⃣  Upload recordings to Supabase Storage
@@ -73,13 +72,17 @@ def extract_transform_load_calls(updated_at_gt=None, updated_at_lt=None):
     upload_summary = upload_result.get("summary", {})
     upload_map = upload_result.get("upload_map", {})
 
+    upload_total = upload_summary.get("total", 0)
     upload_success = upload_summary.get("success", 0)
-    upload_skipped = upload_summary.get("skipped", 0)
+    upload_uploaded = upload_summary.get("uploaded", 0)
+    upload_signed_url_generated = upload_summary.get("signed_url_generated", 0)
+    upload_skipped_no_url = upload_summary.get("skipped_no_stereo_url", 0)
     upload_failed = upload_summary.get("failed", 0)
 
     logger.success(
-        f"✅ Upload stage completed — {upload_success} succeeded, "
-        f"{upload_skipped} skipped, {upload_failed} failed."
+        f"✅ Upload stage completed — Total={upload_total}, "
+        f"Success={upload_success} (Uploaded={upload_uploaded}, Signed URL Generated={upload_signed_url_generated}), "
+        f"Skipped (no URL)={upload_skipped_no_url}, Failed={upload_failed}"
     )
 
     # Map signed URLs back to DataFrame
@@ -113,14 +116,16 @@ def extract_transform_load_calls(updated_at_gt=None, updated_at_lt=None):
     print_etl_summary(
         extract_count=extract_count,
         transform_count=transform_count,
+        upload_total=upload_total,
         upload_success=upload_success,
-        upload_skipped=upload_skipped,
+        upload_uploaded=upload_uploaded,
+        upload_signed_url_generated=upload_signed_url_generated,
+        upload_skipped_no_url=upload_skipped_no_url,
         upload_failed=upload_failed,
         load_success=load_success,
         load_failed=load_failed,
         audit_time=audit_time,
         num_existing=num_existing,
-        num_new_or_updated=num_new_or_updated,
     )
 
     logger.success("🎉 ETL Pipeline completed successfully.")

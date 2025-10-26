@@ -104,7 +104,7 @@ def _fetch_existing_records(df: pd.DataFrame) -> Dict[tuple[str, str], bool]:
     logger.info(f"🔎 Checking {len(ids)} records for existence in Supabase...")
 
     existing_records: List[Dict[str, Any]] = []
-    BATCH_SIZE = 1000
+    BATCH_SIZE = 100
 
     for i in range(0, len(ids), BATCH_SIZE):
         batch_ids = ids[i:i + BATCH_SIZE]
@@ -179,17 +179,19 @@ def transform_calls(calls: List[Dict[str, Any]]) -> Dict[str, Any]:
     existing_lookup = _fetch_existing_records(df)
     df = _mark_existing_records(df, existing_lookup)
 
-    num_existing = int(df["already_existing_in_db"].sum())
-    df_new = df[df["already_existing_in_db"] == False].copy()
-    num_new_or_updated = len(df_new)
+    #
 
-    logger.info(f"Marked {num_existing} existing records; proceeding with {num_new_or_updated} new ones.")
-    logger.success(f"SUCCESS: Transformed {len(df_new)} calls to DataFrame.")
+    num_existing = int(df["already_existing_in_db"].sum())
+    logger.info(f"Marked {num_existing} existing records in DB (for sanity check).")
+    logger.success(f"SUCCESS: Transformed {len(df)} calls to DataFrame.")
+
+    # Remove helper column before returning
+    if "already_existing_in_db" in df.columns:
+        df.drop(columns=["already_existing_in_db"], inplace=True)
 
     return {
-        "df": df_new,
+        "df": df,
         "num_existing": num_existing,
-        "num_new_or_updated": num_new_or_updated,
         "num_transformed": num_transformed
     }
 

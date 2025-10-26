@@ -40,8 +40,9 @@
    ```
 
 4. **Run the pipeline**
+
    ```bash
-   python main.py
+   python main.py --updated_at_gt "2025-10-23T00:00:00Z" --updated_at_lt "2025-10-25T00:00:00Z"
    ```
 
 ## 📊 How It Works
@@ -49,27 +50,40 @@
 ```mermaid
 graph LR
     A[VAPI API] -->|Extract| B[Raw Data]
-    B -->|Transform| C[DataFrame]
+    B -->|Transform| C[Structured DataFrame]
     C -->|Upload Audio| D[Supabase Storage]
-    C -->|Load Data| E[Supabase DB]
+    C -->|Load Data| E[Supabase Database]
+    E -->|Audit + Summary| F[ETL Report]
 ```
 
 1. **Extract**: Fetch call data from VAPI v2 API with pagination
-2. **Transform**: Convert to structured DataFrame with schema validation
-3. **Upload**: Parallel upload of audio recordings to Supabase storage
+2. **Transform**: Normalize and clean, dedupe call records into structured DataFrames
+3. **Upload Audio**: Parallel upload of audio recordings to Supabase storage
 4. **Load**: Upsert transformed data to Supabase with audit tracking
+5. **Summarize**: Print ETL performance stats and completion report
 
 ## 🛠️ Development
 
-### Project Structure
+### 🧱 Project Structure
 ```
 vapi-elt-job/
-├── main.py           # Pipeline entry point
-├── extract.py        # VAPI data extraction
-├── transform.py      # Data transformation logic
-├── upload_audio.py   # Audio file processing
-├── load.py          # Supabase loading
-└── utils/           # Shared utilities
+├── main.py               # 🚀 Orchestrates the full ETL pipeline (entry point)
+│
+├── extract.py            # 🔹 Extracts raw call data from the VAPI v2 API
+├── transform.py          # 🧩 Normalizes data and checks for duplicates
+├── upload_audio.py       # 🎵 Handles parallel uploads of audio recordings
+├── load.py               # 💾 Loads the final dataset into Supabase
+│
+├── utils/                # ⚙️ Shared utility modules
+│   ├── logger_utils.py   # Centralized logger setup with rich console output
+│   ├── summary_utils.py  # Prints color-coded ETL summary banners
+│   └── ...
+│
+├── config.py             # 🔐 Environment config and Supabase/VAPI settings
+├── requirements.txt      # 📦 Python dependencies
+├── .env.example          # 🔑 Template for environment variables
+└── README.md             # 📘 Project documentation
+
 ```
 
 ### Key Components
@@ -77,6 +91,40 @@ vapi-elt-job/
 - `transform.py`: Data structure transformation
 - `upload_audio.py`: Parallel audio processing
 - `load.py`: Supabase integration with schema validation
+
+### 🧩 Module Dependency Diagram
+
+```mermaid
+graph TD
+    A[main.py] --> B[extract.py]
+    A --> C[transform.py]
+    A --> D[upload_audio.py]
+    A --> E[load.py]
+    B -->|fetches| F[VAPI API]
+    D -->|uploads| G[Supabase Storage]
+    E -->|loads data| H[Supabase Database]
+    A --> I[utils/logger_utils.py]
+    A --> J[utils/summary_utils.py]
+```
+
+### 🧪 Example Run Output
+
+```yaml
+🔹 Starting extraction from VAPI v2 API...
+✅ Extracted 1,450 call records across 15 pages.
+🔹 Transforming extracted call data...
+✅ Transformed 1,450 records — 320 existing, 1,130 new/updated.
+🔹 Uploading recordings to Supabase Storage...
+✅ Upload complete — 1,128 succeeded, 2 failed.
+🔹 Loading transformed dataset into Supabase table...
+✅ Load completed successfully at 2025-10-25T04:22:15Z.
+📊 ETL SUMMARY
+🟢 Extracted: 1,450 | Transformed: 1,450
+☁️  Uploaded: 1,128 | Failed: 2
+💾  Loaded: 1,128 | Audit Time: 2025-10-25T04:22:15Z
+
+```
+
 
 ## 📝 Logging
 
@@ -106,4 +154,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - All contributors who help improve this project
 
 ---
-Made with ❤️ as a weekend project. Star ⭐ if you found it useful!
+Made with ❤️ by Ronak & heavy-lifting by Copilot. Star ⭐ if you found it useful!

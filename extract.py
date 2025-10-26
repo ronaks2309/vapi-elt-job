@@ -1,75 +1,181 @@
 # extract.py
-import requests
-from config import VAPI_BASE_URL, VAPI_API_KEY, VAPI_PAGE_LIMIT, USE_RICH_LOGGING # You can add LIMIT in config if not already there
-from utils.logger_utils import get_logger
+"""
+VAPI → Supabase ETL: Extract Stage
+----------------------------------
+
+Fetches call records from the VAPI v2 API with optional incremental filtering.
+
+Simplified version — minimal helpers, clear flow:
+- Pagination and API error handling included.
+- Built-in incremental filtering with updatedAtGt / updatedAtLt.
+- Stops automatically when final page reached.
+- Safe guards for overly large result sets.
+
+Author: Ronak (refactored for clarity and simplicity)
+"""
+
+from __future__ import annotations
 import time
-import os
+import requests
+from typing import Any, Dict, List, Optional
+
+from config import (
+    VAPI_BASE_URL,
+    VAPI_API_KEY,
+    VAPI_PAGE_LIMIT,
+    USE_RICH_LOGGING,
+)
+from utils.logger_utils import get_logger
+
+__all__ = ["extract_calls"]
 
 logger = get_logger(__name__, use_rich=USE_RICH_LOGGING)
 
 
-def extract_calls(api_key=None, updated_at_gt=None):
-    """
-    Fetch calls from VAPI v2 with page-based pagination.
-    Supports incremental extraction using updated_at_gt.
-    """
+# ============================================================================
+# 🧩 Helper: Fetch one page
+# ============================================================================
 
+def _fetch_page(
+    page: int,
+    updated_at_gt: Optional[str],
+    updated_at_lt: Optional[str],
+) -> Dict[str, Any]:
+    """
+    Fetch a single page of results from the VAPI API.
+    Returns both data and status info.
+    """
     headers = {
         "Authorization": f"Bearer {VAPI_API_KEY}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
-    page = 1
-    all_calls = []
+    params: Dict[str, Any] = {
+        "page": page,
+        "limit": VAPI_PAGE_LIMIT,
+        "sortOrder": "ASC",
+    }
+    if updated_at_gt:
+        params["updatedAtGt"] = updated_at_gt
+    if updated_at_lt:
+        params["updatedAtLt"] = updated_at_lt
 
-    logger.info("Starting extraction from VAPI...")
-    while True:
-        params = {
-            "page": page,
-            "limit": VAPI_PAGE_LIMIT,
-            "sortOrder": "ASC",
-            # Example filter (you can remove or replace)
-            #"id": "019a1250-1b3a-700b-bb30-9c30e437f1f7"
+    try:
+        resp = requests.get(VAPI_BASE_URL, headers=headers, params=params, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        return {
+            "success": True,
+            "calls": data.get("results", []),
+            "metadata": data.get("metadata", {}),
+            "message": "OK",
         }
-        if updated_at_gt:
-            params["updatedAtGt"] = updated_at_gt
+    except requests.exceptions.RequestException as e:
+        logger.error(f"HTTP error on page {page}: {e}")
+        return {"success": False, "calls": [], "metadata": {}, "message": str(e)}
+    except Exception as e:
+        logger.error(f"Unexpected error on page {page}: {e}")
+        return {"success": False, "calls": [], "metadata": {}, "message": str(e)}
 
-        try:
-            resp = requests.get(VAPI_BASE_URL, headers=headers, params=params, timeout=30)
-            resp.raise_for_status()
-            data = resp.json()
-            calls = data.get("results", [])
-            metadata = data.get("metadata", {})
 
-            if not calls:
-                logger.info(f"No more records after page {page}. Extraction complete.")
-                break
+# ============================================================================
+# 🚀 Main Extraction Function
+# ============================================================================
 
-            all_calls.extend(calls)
-            logger.info(f"[Page {page}] Retrieved {len(calls)} calls.")
+def extract_calls(
+    updated_at_gt: Optional[str] = None,
+    updated_at_lt: Optional[str] = None,
+) -> Dict[str, Any]:
+    """
+    Fetch call records from VAPI v2 with pagination and optional filters.
 
-            # Stop if last page has fewer than LIMIT results
-            if len(calls) < VAPI_PAGE_LIMIT:
-                break
+    Args:
+        updated_at_gt: Extract calls updated after this UTC timestamp.
+        updated_at_lt: Extract calls updated before this UTC timestamp.
 
-            page += 1
-            time.sleep(0.3)  # small pause for API politeness
+    Returns:
+        dict: {
+            "success": bool,
+            "message": str,
+            "calls": List[Dict[str, Any]],
+            "metadata": Dict[str, Any],
+            "num_calls": int,
+            "num_pages": int
+        }
+    """
+    logger.info("🔹 Starting extraction from VAPI API...")
+    page = 1
+    all_calls: List[Dict[str, Any]] = []
+    metadata: Dict[str, Any] = {}
 
-        except requests.exceptions.RequestException as e:
-            logger.error(f"HTTP error on page {page}: {e}")
+    while True:
+        result = _fetch_page(page, updated_at_gt, updated_at_lt)
+        if not result["success"]:
+            logger.error(f"❌ Extraction failed on page {page}: {result['message']}")
             break
-        except Exception as e:
-            logger.error(f"Unexpected error on page {page}: {e}")
+
+        calls = result.get("calls", [])
+        metadata = result.get("metadata", {})
+
+        # --- Guard: too many totalItems (prevent runaway extraction)
+        if page == 1:
+            total_items = metadata.get("totalItems")
+            if total_items and total_items > 10000:
+                msg = f"Returned {total_items} calls (>10k). Please narrow the date range."
+                logger.error(msg)
+                return {
+                    "success": False,
+                    "message": msg,
+                    "metadata": metadata,
+                    "calls": [],
+                    "num_calls": 0,
+                    "num_pages": page,
+                }
+
+        # --- No data? Stop pagination
+        if not calls:
+            logger.info(f"No more records after page {page}. Extraction complete.")
             break
 
-    logger.info(f"✅ Extraction complete — total {len(all_calls)} calls fetched.")
-    logger.success(f"SUCCESS: Extracted {len(all_calls)} calls from VAPI API.")
-    return all_calls
+        # --- Append results and log progress
+        all_calls.extend(calls)
+        logger.info(f"[Page {page}] Retrieved {len(calls)} calls.")
+
+        # --- If last page smaller than limit → stop
+        if len(calls) < VAPI_PAGE_LIMIT:
+            logger.info("Reached final page (less than limit).")
+            break
+
+        page += 1
+        time.sleep(0.3)  # polite delay between requests
+
+    logger.success(f"✅ Extraction complete — total {len(all_calls)} calls fetched.")
+    return {
+        "success": True,
+        "message": f"Extracted {len(all_calls)} calls successfully.",
+        "calls": all_calls,
+        "metadata": metadata,
+        "num_calls": len(all_calls),
+        "num_pages": page,
+    }
+
+
+# ============================================================================
+# 🧪 Standalone test
+# ============================================================================
 
 if __name__ == "__main__":
     logger.info("Running standalone extraction test...")
-    calls = extract_calls()
-    logger.info(f"Fetched {len(calls)} calls")
-    if calls:
-        logger.info(f"Sample call ID: {calls[0].get('id')}")
 
+    result = extract_calls(
+        updated_at_gt="2025-10-23T00:00:00Z",
+        updated_at_lt="2025-10-25T00:00:00Z",
+    )
+
+    if result.get("success"):
+        calls = result.get("calls", [])
+        logger.info(f"Fetched {len(calls)} calls.")
+        if calls:
+            logger.info(f"Sample call ID: {calls[0].get('id')}")
+    else:
+        logger.error(f"Extraction failed: {result.get('message')}")

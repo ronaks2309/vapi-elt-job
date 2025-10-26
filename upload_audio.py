@@ -17,10 +17,12 @@ from config import (
 )
 from utils.logger_utils import get_logger
 
+__all__ = ["upload_recordings_parallel"]
+
 logger = get_logger(__name__, use_rich=USE_RICH_LOGGING)
 
 
-def upload_recording(call_id, url):
+def _upload_recording(call_id, url):
     """
     Download MP3 and upload to Supabase Storage (private bucket).
     Returns signed URL + expiry timestamp.
@@ -85,7 +87,7 @@ def upload_recordings_parallel(df, max_workers=MAX_WORKERS):
         # Retry loop for failed uploads
         for attempt in range(1, MAX_RETRIES + 1):
             try:
-                signed_url, expiry = upload_recording(call_id, stereo_url)
+                signed_url, expiry = _upload_recording(call_id, stereo_url)
                 return call_id, signed_url, expiry, "success"
             except Exception as e:
                 if attempt < MAX_RETRIES:

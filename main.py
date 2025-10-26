@@ -21,6 +21,7 @@ from load import load_to_supabase
 from utils.logger_utils import get_logger
 from utils.summary_utils import print_etl_summary
 from config import USE_RICH_LOGGING
+import argparse
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Logger setup
@@ -31,27 +32,36 @@ logger = get_logger(__name__, use_rich=USE_RICH_LOGGING)
 # ──────────────────────────────────────────────────────────────────────────────
 # Main ETL pipeline
 # ──────────────────────────────────────────────────────────────────────────────
-def main():
-    # =========================================================================
-    # 1️⃣  Extract stage
-    # =========================================================================
-    logger.info("🔹 Starting extraction from VAPI v2 API...")
-    calls = extract_calls(updated_at_gt="2025-10-23T16:00:00Z")
-    extract_count = len(calls)
 
-    if not calls:
+def extract_transform_load_calls(updated_at_gt=None, updated_at_lt=None):
+    logger.info("🔹 Starting extraction from VAPI v2 API...")
+    extract_result = extract_calls(updated_at_gt=updated_at_gt, updated_at_lt=updated_at_lt)
+
+    if not extract_result.get("success"):
+        logger.error(f"❌ Extraction failed: {extract_result.get('message')}")
+        return
+
+    calls = extract_result.get("calls", [])
+    extract_count = extract_result.get("num_calls", 0)
+    num_pages = extract_result.get("num_pages", 0)
+    metadata = extract_result.get("metadata", {})
+
+    if extract_count == 0:
         logger.warning("⚠️ No calls found in extraction window. Exiting ETL.")
         return
 
-    logger.success(f"✅ Extracted {extract_count} call records from VAPI.")
+    logger.success(f"✅ Extracted {extract_count} call records from VAPI across {num_pages} page(s). Metadata: {metadata}")
 
     # =========================================================================
     # 2️⃣  Transform stage
     # =========================================================================
     logger.info("🔹 Transforming extracted call data...")
-    df = transform_calls(calls)
-    transform_count = len(df)
-    logger.success(f"✅ Transformed {transform_count} records into DataFrame.")
+    transform_result = transform_calls(calls)
+    df = transform_result["df"]
+    num_existing = transform_result["num_existing"]
+    num_new_or_updated = transform_result["num_new_or_updated"]
+    transform_count = transform_result.get("num_transformed", len(df))
+    logger.success(f"✅ Transformed {transform_count} records into DataFrame. {num_existing} already existed, {num_new_or_updated} new/updated.")
 
     # =========================================================================
     # 3️⃣  Upload recordings to Supabase Storage
@@ -109,13 +119,20 @@ def main():
         load_success=load_success,
         load_failed=load_failed,
         audit_time=audit_time,
+        num_existing=num_existing,
+        num_new_or_updated=num_new_or_updated,
     )
 
     logger.success("🎉 ETL Pipeline completed successfully.")
+    # =========================================================================
 
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Entry Point
 # ──────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="VAPI ETL Pipeline")
+    parser.add_argument("--updated_at_gt", type=str, default=None, help="Extract calls updated after this UTC timestamp (e.g. 2025-10-23T16:00:00Z)")
+    parser.add_argument("--updated_at_lt", type=str, default=None, help="Extract calls updated before this UTC timestamp (e.g. 2025-10-25T00:00:00Z)")
+    args = parser.parse_args()
+    extract_transform_load_calls(updated_at_gt=args.updated_at_gt, updated_at_lt=args.updated_at_lt)

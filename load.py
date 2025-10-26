@@ -9,6 +9,8 @@ from config import get_supabase_client, SUPABASE_SCHEMA, USE_RICH_LOGGING
 from utils.logger_utils import get_logger
 from datetime import datetime, timezone
 
+__all__ = ["load_to_supabase"]
+
 logger = get_logger(__name__, use_rich=USE_RICH_LOGGING)
 supabase = get_supabase_client()
 
@@ -44,7 +46,7 @@ REQUIRED_COLUMNS = ["id", "jsonb"]
 TABLE_NAME = "ai_calls"
 
 
-def validate_dataframe_schema(df: pd.DataFrame):
+def _validate_dataframe_schema(df: pd.DataFrame):
     logger.info("🔍 Validating DataFrame schema before load...")
 
     missing_cols = [col for col in REQUIRED_COLUMNS if col not in df.columns]
@@ -56,7 +58,7 @@ def validate_dataframe_schema(df: pd.DataFrame):
     return True
 
 
-def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+def _clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
     Cleans DataFrame for JSON serialization:
     - replaces NaN / inf with None
@@ -84,11 +86,11 @@ def load_to_supabase(df: pd.DataFrame):
         logger.warning("⚠️ No records to load — DataFrame is empty.")
         return {"success": 0, "failed": 0, "audit_time": None}
 
-    if not validate_dataframe_schema(df):
+    if not _validate_dataframe_schema(df):
         return {"success": 0, "failed": len(df), "audit_time": None, "error": "Schema validation failed"}
 
     # Clean NaN/inf/nulls
-    df = clean_dataframe(df)
+    df = _clean_dataframe(df)
 
     # Add audit timestamp
     audit_time = datetime.now(timezone.utc).isoformat()
